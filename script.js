@@ -5,466 +5,468 @@ const story = {
         bg: "/assets/library_bg_1778962737349.png",
         char: "",
         speaker: "",
-        text: "GÖLGELERDEN ZİRVEYE: 15 BÖLÜMLÜK TAM SÜRÜM\nAnksiyete Barına dikkat et! 70'i geçerse Lara panik atak geçirir.",
+        text: "Lara: Gölgelerden Zirveye\n20 Bölüm ve 9 Farklı Son Sizi Bekliyor.\nAnksiyete barına dikkat edin!",
         choices: [
-            { text: "Oyuna Başla", target: "ep1_1", anxietyChange: 0 }
+            { text: "Hikayeye Başla", target: "ch1_1", anxietyChange: 0 }
         ]
     },
 
     // ==========================================
-    // BÖLÜM 1: Yeni Başlangıçların Ağırlığı
+    // BÖLÜM 1: GÖLGELERİN ARASINDA
     // ==========================================
-    ep1_1: {
+    ch1_1: {
         bg: "/assets/vn_classroom_bg_1778961836745.png",
         char: "/assets/vn_character_sprite_1778962030093.png",
         speaker: "Lara",
-        text: "(Bölüm 1) Yeni bir okul. Kalbim göğüs kafesimi delecek gibi atıyor. Eski okulumdaki o travmatik zorbalıklardan kaçıp buraya geldim ama... ya burada da aynısı olursa?",
-        next: "ep1_2"
+        text: "(Bölüm 1) Yeni bir başlangıç... Herkes bana öyle diyor. Ama geçmişim ayaklarıma dolanmış bir zincir gibi beni takip ediyor. Bu okul, bu insanlar... Hepsi çok gürültülü.",
+        next: "ch1_2"
     },
-    ep1_2: {
+    ch1_2: {
         speaker: "Sistem",
-        text: "Kantine girerken ellerin titriyor. Birinin sana baktığını hissediyorsun.",
+        text: "Sınıfa girerken herkesin sustuğunu ve sana baktığını hissediyorsun. Kalbin hızlanıyor.",
         choices: [
-            { text: "Derin nefes al ve yürümeye devam et", target: "ep1_3a", anxietyChange: -10 },
-            { text: "Panikleyip adımlarını hızlandır", target: "ep1_3b", anxietyChange: +20 }
+            { text: "En arka sıraya saklan", target: "ch1_3a", anxietyChange: +10 },
+            { text: "Başın dik bir şekilde bir sıraya otur", target: "ch1_3b", anxietyChange: -5 }
         ]
     },
-    ep1_3a: {
-        char: "/assets/vn_character_sprite_1778962030093.png",
+    ch1_3a: {
         speaker: "Lara",
-        text: "Sakin ol Lara. Kimse sana bakmıyor. Sadece kahveni alacaksın...",
-        next: "ep2_1"
+        text: "Görünmez olmak istiyorum. Lütfen kimse benimle konuşmasın...",
+        next: "ch2_1"
     },
-    ep1_3b: {
-        char: "/assets/vn_character_sprite_1778962030093.png",
+    ch1_3b: {
         speaker: "Lara",
-        text: "Bana bakıyorlar, gülümsüyorlar! Hızlanmalıyım!",
-        next: "ep2_1"
+        text: "Korkmadığımı göstermeliyim. Ben artık o eski, güçsüz kız değilim.",
+        next: "ch2_1"
     },
 
     // ==========================================
-    // BÖLÜM 2: Beklenmedik Çarpışma
+    // BÖLÜM 2: ÇARPIŞMA VE KIVILCIM
     // ==========================================
-    ep2_1: {
+    ch2_1: {
         bg: "/assets/vn_classroom_bg_1778961836745.png",
         speaker: "Sistem",
-        text: "(Bölüm 2) Hızla köşeyi dönerken sert birine çarparsın. Elindeki kahve çocuğun üzerine dökülür.",
-        next: "ep2_2"
+        text: "(Bölüm 2) Kantine giderken dalgınsın. Zihninde annenin sesi yankılanıyor: 'Sakın hata yapma!'",
+        next: "ch2_2"
     },
-    ep2_2: {
+    ch2_2: {
+        speaker: "Sistem",
+        text: "*ÇAT!* Birine çarptın. Sıcak kahve hem senin hem de çarptığın kişinin üzerine döküldü.",
+        next: "ch2_3"
+    },
+    ch2_3: {
         char: "/assets/kaan_sprite_1778962129326.png",
         speaker: "Kaan",
-        text: "Ne yaptığını sanıyorsun sen! Görmüyor musun önünü?",
+        text: "Hey! Önüne baksana! Bu gömlek yeniydi!",
         choices: [
-            { text: "Özür dileyip geri çekil", target: "ep2_3a", anxietyChange: +15 },
-            { text: "Donup kal", target: "ep2_3b", anxietyChange: +30 }
+            { text: "Ağlamaya başla", target: "ch2_4a", anxietyChange: +20 },
+            { text: "Gözlerinin içine bak ve özür dile", target: "ch2_4b", anxietyChange: +5 }
         ]
     },
-    ep2_3a: {
-        char: "/assets/vn_character_sprite_1778962030093.png",
+    ch2_4a: {
         speaker: "Lara",
-        text: "Ç-Çok özür dilerim...",
-        next: "ep3_1"
+        text: "Özür dilerim... Ben... ben çok sakarım...",
+        next: "ch3_1"
     },
-    ep2_3b: {
-        char: "/assets/vn_character_sprite_1778962030093.png",
+    ch2_4b: {
         speaker: "Lara",
-        text: "(Konuşamıyorum... Boğazım düğümlendi. Sadece gözlerine bakıyorum.)",
-        next: "ep2_flashback"
+        text: "Üzgünüm, kasıtlı değildi. Temizlemene yardım edebilirim.",
+        next: "ch3_1"
     },
-    ep2_flashback: {
+
+    // ==========================================
+    // BÖLÜM 3: GÖLGE ADAM: ARES
+    // ==========================================
+    ch3_1: {
+        bg: "/assets/garden_bg_1778962904703.png",
+        speaker: "Sistem",
+        text: "(Bölüm 3) Bahçede bir ağacın altında oturuyorsun. Biri sana doğru yaklaşıyor.",
+        next: "ch3_2"
+    },
+    ch3_2: {
+        char: "/assets/ARES.png",
+        speaker: "Ares",
+        text: "Kaan biraz kabadır, kafana takma. Ben Ares. Eylül'den uzak durursan burada hayatta kalabilirsin.",
+        choices: [
+            { text: "Eylül kim? diye sor", target: "ch3_3a", anxietyChange: +5 },
+            { text: "Teşekkür edip uzaklaş", target: "ch3_3b", anxietyChange: 0 }
+        ]
+    },
+    ch3_3a: {
+        speaker: "Ares",
+        text: "Bu okulun kraliçesi olduğunu sanan biri. Ve Kaan'ın en büyük hayranı.",
+        next: "ch4_1"
+    },
+    ch3_3b: {
+        speaker: "Ares",
+        text: "Dikkatli ol Lara. Burada sırlar çabuk yayılır.",
+        next: "ch4_1"
+    },
+
+    // ==========================================
+    // BÖLÜM 4: ANNENİN SESİ
+    // ==========================================
+    ch4_1: {
         bg: "",
         char: "",
         speaker: "Annesi (Flashback)",
-        text: "'Bir işi de beceremiyor musun? Her yeri mahvettin yine sakar!' (Zihnimde annemin o keskin sesi yankılandı...)",
-        next: "ep3_1"
+        text: "(Bölüm 4) 'Yine mi başarısız oldun? Senden bir şey olmayacağını söylemiştim Lara. Sen sadece bir yüksün.'",
+        next: "ch4_2"
     },
-
-    // ==========================================
-    // BÖLÜM 3: Ares'in Gelişi
-    // ==========================================
-    ep3_1: {
-        bg: "/assets/garden_bg_1778962904703.png",
-        speaker: "Sistem",
-        text: "(Bölüm 3) Bahçeye kaçtın. Gözyaşlarını silerken yanına iriyarı, sert bakışlı biri oturur.",
-        next: "ep3_2"
-    },
-    ep3_2: {
-        char: "/assets/ARES.png", 
-        speaker: "Ares",
-        text: "Kaan hep öyledir, kafana takma. Ben Ares. Sen şu yeni gelen kız olmalısın, Lara değil mi?",
-        next: "ep3_3"
-    },
-    ep3_3: {
+    ch4_2: {
+        bg: "/assets/library_bg_1778962737349.png",
         char: "/assets/vn_character_sprite_1778962030093.png",
         speaker: "Lara",
-        text: "Evet... Memnun oldum Ares. Ama yalnız kalmak istiyorum.",
-        next: "ep4_1"
+        text: "Hayır... Hayır, o sesler sussun artık! Ben yük değilim!",
+        choices: [
+            { text: "Kütüphaneye sığın", target: "ch5_1", anxietyChange: +10 },
+            { text: "Banyoya gidip yüzünü yıka", target: "ch5_1", anxietyChange: -5 }
+        ]
     },
 
     // ==========================================
-    // BÖLÜM 4: Eylül'ün Gölgesi
+    // BÖLÜM 5: SAHTE DOSTLUK TEKLİFİ
     // ==========================================
-    ep4_1: {
+    ch5_1: {
         bg: "/assets/library_bg_1778962737349.png",
-        speaker: "Sistem",
-        text: "(Bölüm 4) Kütüphanede ders çalışırken karşındaki sandalyeye güzel bir kız oturur.",
-        next: "ep4_2"
-    },
-    ep4_2: {
         char: "/assets/eylul_sprite_1778962140020.png",
         speaker: "Eylül",
-        text: "Merhaba tatlım. Ben Eylül. Kaan'ın en yakın arkadaşıyım. Kaan'dan uzak durursan okul hayatın çok daha kolay olur.",
+        text: "(Bölüm 5) Selam canım. Ben Eylül. Kaan için üzüldüm, o bazen çok sert olabiliyor. Gel, seninle arkadaş olalım.",
         choices: [
-            { text: "Sesini çıkarma, kabul et", target: "ep4_3a", anxietyChange: +20 },
-            { text: "Bana emir veremezsin de", target: "ep4_3b", anxietyChange: -5 }
+            { text: "Teklifini kabul et", target: "ch5_2a", anxietyChange: -10 },
+            { text: "Niyetini sorgula", target: "ch5_2b", anxietyChange: +15 }
         ]
     },
-    ep4_3a: {
-        char: "/assets/vn_character_sprite_1778962030093.png",
-        speaker: "Lara",
-        text: "Peki... Anladım.",
-        next: "ep5_1"
-    },
-    ep4_3b: {
-        char: "/assets/vn_character_sprite_1778962030093.png",
-        speaker: "Lara",
-        text: "Ben kimseden uzak durmam. O bana çarptı.",
-        next: "ep5_1"
-    },
-
-    // ==========================================
-    // BÖLÜM 5: Gece Mesajı
-    // ==========================================
-    ep5_1: {
-        bg: "/assets/library_bg_1778962737349.png",
-        speaker: "Sistem",
-        text: "(Bölüm 5) O gece telefonuna bir mesaj gelir. Kaan numaranı bulmuş ve senden o sabahki çıkışı için özür dilemiştir.",
-        next: "ep5_2"
-    },
-    ep5_2: {
-        char: "/assets/kaan_sprite_1778962129326.png",
-        speaker: "Kaan (Mesaj)",
-        text: "'Uyuyor musun? Sabah için üzgünüm. Biraz stresliydim.'",
-        choices: [
-            { text: "Affet ve sohbete başla", target: "ep6_1", anxietyChange: -10 },
-            { text: "Görüldü at ve telefonu kapat", target: "ep6_1", anxietyChange: +10 }
-        ]
-    },
-
-    // ==========================================
-    // BÖLÜM 6: Ares'in Takıntısı
-    // ==========================================
-    ep6_1: {
-        bg: "/assets/garden_bg_1778962904703.png",
-        speaker: "Sistem",
-        text: "(Bölüm 6) Ertesi gün bahçede Ares'i oldukça dalgın görürsün. Yanına gidersin.",
-        next: "ep6_2"
-    },
-    ep6_2: {
-        char: "/assets/ARES.png",
-        speaker: "Ares",
-        text: "Lara... Eylül'le aynı sınıftayız ama benimle tek kelime etmiyor. Oysa ben onu ilk gördüğüm günden beri seviyorum.",
-        choices: [
-            { text: "Ona üzüldüğünü söyle ve destek ol", target: "ep6_3", anxietyChange: -5 },
-            { text: "Eylül'ün Kaan'ı sevdiğini hatırlat", target: "ep6_3", anxietyChange: +15 }
-        ]
-    },
-    ep6_3: {
-        char: "/assets/ARES.png",
-        speaker: "Ares",
-        text: "Biliyorum! Hep o lanet olası Kaan! Kaan'da ne buluyor anlamıyorum. Sadece zengin bir züppe o kadar.",
-        next: "ep7_1"
-    },
-
-    // ==========================================
-    // BÖLÜM 7: Eylül'ün Reddedişi
-    // ==========================================
-    ep7_1: {
-        bg: "/assets/vn_classroom_bg_1778961836745.png",
-        speaker: "Sistem",
-        text: "(Bölüm 7) Ares tüm cesaretini toplayıp boş bir sınıfta Eylül'e hislerini açar. Ancak Eylül acımasızdır.",
-        next: "ep7_2"
-    },
-    ep7_2: {
-        char: "/assets/eylul_sprite_1778962140020.png",
+    ch5_2a: {
         speaker: "Eylül",
-        text: "Sen mi? Bana mı aşıksın? Ares, güldürme beni. Benim gözüm Kaan'dan başkasını görmez. Sen onun tırnağı bile olamazsın.",
-        next: "ep7_3"
+        text: "Harika! Çok eğleneceğiz, göreceksin.",
+        next: "ch6_1"
     },
-    ep7_3: {
-        char: "/assets/ARES.png",
-        speaker: "Ares",
-        text: "(Gözleri dolar ve öfkeyle yumruklarını sıkar) Bunu bana yapmayacaktın Eylül... O Kaan'ın yüzünü dağıtacağım!",
-        next: "ep8_1"
+    ch5_2b: {
+        speaker: "Eylül",
+        text: "Sadece yardım etmek istemiştim. Neden bu kadar şüphelisin?",
+        next: "ch6_1"
     },
 
     // ==========================================
-    // BÖLÜM 8: Anksiyete Tetikleniyor
+    // BÖLÜM 6: GECE GELEN MESAJ
     // ==========================================
-    ep8_1: {
-        bg: "/assets/library_bg_1778962737349.png",
-        char: "/assets/vn_character_sprite_1778962030093.png",
-        speaker: "Lara",
-        text: "(Bölüm 8) Ares'in o öfke dolu gözleri beni çok korkuttu. Eski okulumdaki o kavgacı çocukları hatırlattı. Mideme kramplar giriyor...",
+    ch6_1: {
+        speaker: "Sistem",
+        text: "(Bölüm 6) Gece yarısı telefonun titrer. Bilinmeyen bir numara.",
+        next: "ch6_2"
+    },
+    ch6_2: {
+        speaker: "Mesaj",
+        text: "'Uyuyor musun? Bugün için... biraz fazla tepki verdim. Kusura bakma.'",
         choices: [
-            { text: "Kaan'ı uyarmak için ara", target: "ep9_1", anxietyChange: +10 },
-            { text: "Korkudan bir yere saklan", target: "ep9_1", anxietyChange: +25 }
+            { text: "Kimsin? yaz", target: "ch6_3a", anxietyChange: +5 },
+            { text: "Önemli değil yaz", target: "ch6_3b", anxietyChange: -5 }
         ]
     },
-
-    // ==========================================
-    // BÖLÜM 9: Kavga Öncesi Sessizlik
-    // ==========================================
-    ep9_1: {
-        bg: "/assets/garden_bg_1778962904703.png",
-        speaker: "Sistem",
-        text: "(Bölüm 9) Okul çıkışında bahçe inanılmaz sessizdi. Herkesin bir köşeye toplandığını gördün.",
-        next: "ep10_1"
+    ch6_3a: {
+        speaker: "Mesaj",
+        text: "'Ben Kaan. Numaranı Eylül'den aldım.'",
+        next: "ch7_1"
+    },
+    ch6_3b: {
+        speaker: "Mesaj",
+        text: "'Ben Kaan. İyi olduğuna sevindim.'",
+        next: "ch7_1"
     },
 
     // ==========================================
-    // BÖLÜM 10: Büyük Kavga (SİNEMATİK)
+    // BÖLÜM 7: ÇATIDAKİ SIRLAR
     // ==========================================
-    ep10_1: {
+    ch7_1: {
         bg: "/assets/vn_classroom_bg_1778961836745.png",
         speaker: "Sistem",
-        text: "(Bölüm 10) Okulun arkasındaki boş arazide hava aniden ağırlaştı. Ares, Kaan'ın önünü kestiğinde gözleri nefretle parlıyordu.",
-        next: "ep10_2"
+        text: "(Bölüm 7) Ertesi gün okulun çatısında Kaan'ı yalnız başına bulursun.",
+        next: "ch7_2"
     },
-    ep10_2: {
-        char: "/assets/ARES.png",
-        speaker: "Ares",
-        text: "Eylül senin için ağlıyor! Onu mahvettin! Şimdi bunun bedelini ödeyeceksin!",
-        next: "ep10_3"
-    },
-    ep10_3: {
+    ch7_2: {
         char: "/assets/kaan_sprite_1778962129326.png",
         speaker: "Kaan",
-        text: "Ares, yapma. Aramızdaki mesele bu değil. Eylül kendi seçimlerini yaşıyor...",
-        next: "ep10_4"
+        text: "Lara... Buraya gel. Şehri buradan izlemeyi seviyorum. Her şey ne kadar küçük görünüyor değil mi?",
+        choices: [
+            { text: "Yanına otur", target: "ch7_3a", anxietyChange: +10 },
+            { text: "Mesafeni koru", target: "ch7_3b", anxietyChange: 0 }
+        ]
     },
-    ep10_4: {
+    ch7_3a: {
+        speaker: "Lara",
+        text: "Evet... Sanki tüm dertler de o binalarla birlikte küçülüyor.",
+        next: "ch8_1"
+    },
+    ch7_3b: {
+        speaker: "Kaan",
+        text: "Benden hâlâ korkuyor musun?",
+        next: "ch8_1"
+    },
+
+    // ==========================================
+    // BÖLÜM 8: ARES'İN HEDİYESİ
+    // ==========================================
+    ch8_1: {
+        bg: "/assets/garden_bg_1778962904703.png",
+        char: "/assets/ARES.png",
+        speaker: "Ares",
+        text: "(Bölüm 8) Lara, bunu senin için aldım. Belki biraz moralini düzeltir. (Küçük bir kolye uzatır)",
+        choices: [
+            { text: "Kabul et", target: "ch8_2a", anxietyChange: +5 },
+            { text: "Reddet", target: "ch8_2b", anxietyChange: +10 }
+        ]
+    },
+    ch8_2a: {
+        speaker: "Lara",
+        text: "Çok güzel... Teşekkür ederim Ares.",
+        next: "ch9_1"
+    },
+    ch8_2b: {
+        speaker: "Lara",
+        text: "Üzgünüm Ares, bunu kabul edemem.",
+        next: "ch9_1"
+    },
+
+    // ==========================================
+    // BÖLÜM 9: FISILTILAR BAŞLIYOR
+    // ==========================================
+    ch9_1: {
+        bg: "/assets/vn_classroom_bg_1778961836745.png",
+        speaker: "Sistem",
+        text: "(Bölüm 9) Koridorda yürürken herkesin fısıldaştığını duyuyorsun. 'O kız mı Kaan'la çatıda görülmüş?'",
+        next: "ch9_2"
+    },
+    ch9_2: {
+        char: "/assets/eylul_sprite_1778962140020.png",
+        speaker: "Eylül",
+        text: "Lara, tatlım... Kaan ile aranızda bir şey mi var? Sadece merak ettim.",
+        choices: [
+            { text: "Sadece arkadaştık de", target: "ch10_1", anxietyChange: +5 },
+            { text: "Seni ilgilendirmez de", target: "ch10_1", anxietyChange: +20 }
+        ]
+    },
+
+    // ==========================================
+    // BÖLÜM 10: KAVGA VE SİNEMATİK
+    // ==========================================
+    ch10_1: {
+        bg: "/assets/garden_bg_1778962904703.png",
+        speaker: "Sistem",
+        text: "(Bölüm 10) Okul çıkışı Ares, Kaan'ın yolunu keser. Gözlerinden ateş fışkırıyor.",
+        next: "ch10_2"
+    },
+    ch10_2: {
+        char: "/assets/ARES.png",
+        speaker: "Ares",
+        text: "Lara'dan uzak duracaksın Kaan! Onu senin gibi birine yedirmem!",
+        next: "ch10_3"
+    },
+    ch10_3: {
+        speaker: "Sistem",
+        text: "*KÜT!* Ares ilk yumruğu savurur. Kavga büyürken Lara donup kalır.",
+        next: "ch11_1"
+    },
+
+    // ==========================================
+    // BÖLÜM 11: YARALARI SARMAK
+    // ==========================================
+    ch11_1: {
+        bg: "/assets/library_bg_1778962737349.png",
+        char: "/assets/kaan_sprite_1778962129326.png",
+        speaker: "Kaan",
+        text: "(Bölüm 11) Lanet olsun... Ares gerçekten delirdi. (Kaşı kanıyor)",
+        choices: [
+            { text: "Pansuman yap", target: "ch11_2", anxietyChange: -5 },
+            { text: "Onu orada bırak", target: "ch12_1", anxietyChange: +20 }
+        ]
+    },
+    ch11_2: {
+        speaker: "Lara",
+        text: "Canın yanıyor mu? Biraz dur, temizleyeyim.",
+        next: "ch12_1"
+    },
+
+    // ==========================================
+    // BÖLÜM 12: İTİRAF
+    // ==========================================
+    ch12_1: {
+        bg: "/assets/library_bg_1778962737349.png",
+        char: "/assets/eylul_sprite_1778962140020.png",
+        speaker: "Eylül",
+        text: "(Bölüm 12) Lara, bana güvenebilirsin. Anlat bana, seni bu kadar korkutan ne?",
+        next: "ch12_2"
+    },
+    ch12_2: {
+        char: "/assets/vn_character_sprite_1778962030093.png",
+        speaker: "Lara",
+        text: "Annem... Beni karanlık odaya kilitlerdi Eylül. Kimse beni sevmedi.",
+        next: "ch13_1"
+    },
+
+    // ==========================================
+    // BÖLÜM 13: TUZAK KURULUYOR
+    // ==========================================
+    ch13_1: {
+        speaker: "Sistem",
+        text: "(Bölüm 13) Eylül, Lara'nın sırlarını öğrendikten sonra sinsi bir plan yapar. Telefonuyla birilerine mesaj atar.",
+        next: "ch14_1"
+    },
+
+    // ==========================================
+    // BÖLÜM 14: İHANETİN BEDELİ
+    // ==========================================
+    ch14_1: {
+        bg: "/assets/vn_classroom_bg_1778961836745.png",
+        speaker: "Sistem",
+        text: "(Bölüm 14) Okula geldiğinde her yerde senin çocukluk fotoğrafların ve 'Deli Kız' yazıları var.",
+        next: "ch14_2"
+    },
+    ch14_2: {
+        char: "/assets/eylul_sprite_1778962140020.png",
+        speaker: "Eylül",
+        text: "Üzgünüm Lara, ama herkes senin ne kadar tehlikeli olduğunu bilmeliydi.",
+        choices: [
+            { text: "Kaç ve eve git", target: "ch15_1", anxietyChange: +40 },
+            { text: "Kaan'ı ara", target: "ch15_1", anxietyChange: +20 }
+        ]
+    },
+
+    // ==========================================
+    // BÖLÜM 15: ÇÖKÜŞ VE BABA
+    // ==========================================
+    ch15_1: {
         bg: "",
-        char: "",
         speaker: "Sistem",
-        text: "*Ares ilk yumruğu savurur. Kaan sarsılır. Lara'nın zihninde bir şimşek çakar.*",
-        next: "ep10_flashback_1"
+        text: "(Bölüm 15) Nefes alamıyorsun. Her şey kararıyor. Tam düşecekken baban Vedat seni tutuyor.",
+        next: "ch15_2"
     },
-    ep10_flashback_1: {
-        bg: "",
-        char: "",
-        speaker: "Annesi (Flashback)",
-        text: "'Kavga mı? Yine mi sorun çıkardın?! Sen sadece bela getiriyorsun Lara!'",
-        next: "ep10_5"
-    },
-    ep10_5: {
-        bg: "/assets/vn_classroom_bg_1778961836745.png",
-        speaker: "Sistem",
-        text: "Ares, Kaan'ı yere düşürür. Yumruklar ardı ardına inerken Lara sadece izlemek zorunda kalır.",
-        next: "ep10_6"
-    },
-    ep10_6: {
-        bg: "",
-        char: "",
-        speaker: "Lara",
-        text: "(Hayır... Durun! Gözlerimin önünde her şey kararıyor. Kan... Yine kan görüyorum...)",
-        next: "ep10_7"
-    },
-    ep10_7: {
-        bg: "/assets/vn_classroom_bg_1778961836745.png",
-        char: "/assets/ARES.png",
-        speaker: "Ares",
-        text: "Bu kadar mı Kaan? Hani o büyük okul kahramanıydın? Şimdi yerde sürünüyorsun!",
-        next: "ep10_8"
-    },
-    ep10_8: {
-        speaker: "Sistem",
-        text: "Ares, hıncını alıp Kaan'ı kanlar içinde yerde bırakarak oradan uzaklaşır. Lara'nın bacakları titremektedir.",
-        choices: [
-            { text: "Çığlık atarak Kaan'ın yanına koş", target: "ep11_1", anxietyChange: +30 },
-            { text: "Hıçkırıklara boğul ve yere çök", target: "ep11_1", anxietyChange: +10 }
-        ]
+    ch15_2: {
+        speaker: "Vedat",
+        text: "Lara! Buradayım kızım. Korkma. Baban burada.",
+        next: "ch16_1"
     },
 
     // ==========================================
-    // BÖLÜM 11: Pansuman
+    // BÖLÜM 16: İYİLEŞME SÜRECİ
     // ==========================================
-    ep11_1: {
+    ch16_1: {
         bg: "/assets/library_bg_1778962737349.png",
-        char: "/assets/kaan_sprite_1778962129326.png",
-        speaker: "Kaan",
-        text: "(Bölüm 11) (Kaşı yarılmış, dudağı patlamış halde nefes nefese oturur) Neden geldin Lara? Beni bu halde görmeni istemezdim.",
-        next: "ep11_2"
-    },
-    ep11_2: {
-        char: "/assets/vn_character_sprite_1778962030093.png",
-        speaker: "Lara",
-        text: "Sessiz ol Kaan. İzin ver temizleyeyim... (Lara elleri titreyerek pamuğu Kaan'ın yarasına bastırır).",
-        next: "ep11_3"
-    },
-    ep11_3: {
         speaker: "Sistem",
-        text: "Kaan hafifçe inler ama gözlerini Lara'nın o telaşlı, yeşil gözlerinden ayıramaz. Lara ise içten içe titremektedir. 'Ona güvenebilir miyim? Yoksa o da mı beni terk edecek?'",
+        text: "(Bölüm 16) Günlerce evden çıkmıyorsun. Babanla uzun uzun konuşuyorsunuz.",
+        next: "ch16_2"
+    },
+    ch16_2: {
+        speaker: "Vedat",
+        text: "Geçmişin seni tanımlamaz Lara. Sen kendi hikayeni yazabilirsin.",
         choices: [
-            { text: "Gözlerini kaçır (Güvenmek çok zor...)", target: "ep12_1", anxietyChange: +15 },
-            { text: "Kaan'ın elini sıkıca tut", target: "ep12_1", anxietyChange: -5 }
+            { text: "Güçlü kalmaya söz ver", target: "ch17_1", anxietyChange: -20 },
+            { text: "Her şeyden vazgeç", target: "end_5", anxietyChange: +100 }
         ]
     },
 
     // ==========================================
-    // BÖLÜM 12: Sahte Dostluk
+    // BÖLÜM 17: YÜZLEŞME KARARI
     // ==========================================
-    ep12_1: {
+    ch17_1: {
+        bg: "/assets/vn_classroom_bg_1778961836745.png",
+        speaker: "Sistem",
+        text: "(Bölüm 17) Okula geri döndün. Herkes sana bakıyor ama bu sefer korkmuyorsun.",
+        next: "ch18_1"
+    },
+
+    // ==========================================
+    // BÖLÜM 18: SON HESAPLAŞMA
+    // ==========================================
+    ch18_1: {
         bg: "/assets/garden_bg_1778962904703.png",
         char: "/assets/eylul_sprite_1778962140020.png",
         speaker: "Eylül",
-        text: "(Bölüm 12) Lara, geçen günkü olay için çok üzgünüm. Ares'in öyle biri olduğunu bilmiyordum. Gel, her şeyi unutalım ve yeni bir sayfa açalım. Arkadaş olalım mı?",
+        text: "(Bölüm 18) Hâlâ buradasın ha? Pes etmedin mi?",
         choices: [
-            { text: "Eylül'e güvenmeyi dene", target: "ep13_1", anxietyChange: -10 },
-            { text: "Mesafeli kal", target: "ep13_1", anxietyChange: +10 }
+            { text: "Ona meydan oku", target: "ch19_1", anxietyChange: +10 },
+            { text: "Onu görmezden gel", target: "ch19_1", anxietyChange: 0 }
         ]
     },
 
     // ==========================================
-    // BÖLÜM 13: Sırların Paylaşımı
+    // BÖLÜM 19: KAAN'IN SEÇİMİ
     // ==========================================
-    ep13_1: {
-        bg: "/assets/library_bg_1778962737349.png",
-        char: "/assets/eylul_sprite_1778962140020.png",
-        speaker: "Eylül",
-        text: "(Bölüm 13) Haftalar geçer. Lara ve Eylül kütüphanede vakit geçirir. Lara, annesiyle ilgili travmalarını ilk kez birine anlatır... Eylül'e.",
-        next: "ep13_2"
-    },
-    ep13_2: {
-        char: "/assets/vn_character_sprite_1778962030093.png",
-        speaker: "Lara",
-        text: "Kimseye söylemedim ama Eylül... Annem beni karanlık odaya kilitlerdi. Sevgi nedir hiç bilmedim.",
-        next: "ep13_3"
-    },
-    ep13_3: {
-        char: "/assets/eylul_sprite_1778962140020.png",
-        speaker: "Eylül",
-        text: "Ah Lara... Ne kadar acı. Merak etme, sırrın benimle güvende. (Eylül'ün yüzünde tuhaf, soğuk bir gülümseme belirir.)",
-        next: "ep14_1"
-    },
-
-    // ==========================================
-    // BÖLÜM 14: Büyük İhanet
-    // ==========================================
-    ep14_1: {
-        bg: "/assets/vn_classroom_bg_1778961836745.png",
-        speaker: "Sistem",
-        text: "(Bölüm 14) Ertesi gün okula girdiğinde herkesin fısıldaştığını duyarsın. Panolarda senin çocukluk fotoğrafların ve 'Annesi tarafından istenmeyen kız' yazıları vardır.",
-        next: "ep14_2"
-    },
-    ep14_2: {
-        char: "/assets/eylul_sprite_1778962140020.png",
-        speaker: "Eylül",
-        text: "Üzgünüm Lara, ama Kaan'ın senin gibi 'hasarlı' biriyle vakit kaybetmesine izin veremezdim. İnsanlar senin ne kadar dengesiz olduğunu bilmeliydi.",
-        choices: [
-            { text: "Eylül'ün üzerine yürü", target: "ep15_1", anxietyChange: +30 },
-            { text: "Okuldan kaç, eve sığın", target: "ep14_father_start", anxietyChange: +10 }
-        ]
-    },
-
-    // ==========================================
-    // BÖLÜM 14.5: Babanın Şefkati
-    // ==========================================
-    ep14_father_start: {
-        bg: "/assets/library_bg_1778962737349.png", // Ev içi niyetine
-        char: "",
-        speaker: "Sistem",
-        text: "Okuldan koşarak çıktın. Gözyaşların yanaklarını yakarken eve vardın. Kapıyı baban Vedat açtı.",
-        next: "ep14_father_1"
-    },
-    ep14_father_1: {
-        speaker: "Vedat",
-        text: "Lara? Kızım, bu halin ne? Yine mi o eski kabuslar? Gel buraya...",
-        next: "ep14_father_2"
-    },
-    ep14_father_2: {
-        char: "/assets/vn_character_sprite_1778962030093.png",
-        speaker: "Lara",
-        text: "Baba... Eylül her şeyi anlattı. Herkes biliyor artık. Annemin bana yaptıklarını, karanlık odayı... Herkes benden nefret edecek.",
-        next: "ep14_father_3"
-    },
-    ep14_father_3: {
-        speaker: "Vedat",
-        text: "Bak bana Lara. Annenin hastalığı onun suçuydu, senin değil. Sen o karanlık odadan çıktın kızım. Sen o odadan daha büyüksün. Kimsenin seni etiketlemesine izin verme.",
-        next: "ep14_father_4"
-    },
-    ep14_father_4: {
-        speaker: "Vedat",
-        text: "Seni her halinle seven bir baban var. Ve eminim o çocuk... Kaan... O da senin gerçek kalbini görüyor. Şimdi sil gözyaşlarını, yarın o okula başın dik döneceksin.",
-        choices: [
-            { text: "Babana sarıl ve huzur bul", target: "ep15_1", anxietyChange: -30 },
-            { text: "Sessizce odana çekil", target: "ep15_1", anxietyChange: -5 }
-        ]
-    },
-
-    // ==========================================
-    // BÖLÜM 15: FİNAL (Yüzleşme)
-    // ==========================================
-    ep15_1: {
+    ch19_1: {
         bg: "/assets/garden_bg_1778962904703.png",
         char: "/assets/kaan_sprite_1778962129326.png",
         speaker: "Kaan",
-        text: "(Bölüm 15 - FİNAL) Kaan, Eylül'ün yanına gelir. 'Bunu nasıl yaparsın Eylül? Lara'nın güvenini nasıl böyle kırarsın?'",
-        next: "ep15_2"
+        text: "(Bölüm 19) Lara... Ben her şeyi öğrendim. Eylül'ün ne yaptığını biliyorum. Özür dilerim.",
+        choices: [
+            { text: "Onu affet", target: "ch20_1", anxietyChange: -10 },
+            { text: "Onu hayatından çıkar", target: "ch20_1", anxietyChange: +5 }
+        ]
     },
-    ep15_2: {
-        char: "/assets/vn_character_sprite_1778962030093.png",
-        speaker: "Lara",
-        text: "Kaan... Ben artık kimseye güvenemem. Annem haklıydı, dünya çok karanlık bir yer.",
-        next: "ep15_3"
-    },
-    ep15_3: {
-        char: "/assets/kaan_sprite_1778962129326.png",
-        speaker: "Kaan",
-        text: "Hayır Lara. Ben buradayım. Eylül'ü hayatımızdan sonsuza dek çıkarıyoruz. Sadece bana bak... Lütfen.",
-        next: "ep_end"
-    },
-    ep_end: {
+
+    // ==========================================
+    // BÖLÜM 20: FİNAL YOLU
+    // ==========================================
+    ch20_1: {
         speaker: "Sistem",
-        text: "MUTLU SON: Eğer anksiyeten 70'i geçmediyse, tebrikler! Geçmişinin hayaletlerini yendin, Kaan'ın yaralarını iyileştirdin ve o da senin kalbini iyileştirdi.",
+        text: "(Bölüm 20) Ve işte yolun sonu. Seçimlerin seni buraya getirdi.",
+        next: "decide_end"
+    },
+
+    decide_end: {
+        speaker: "Sistem",
+        text: "Kaderin belirleniyor...",
+        next: "check_ending"
+    },
+
+    check_ending: {
+        speaker: "Sistem",
+        text: "Sonuçlar analiz ediliyor...",
+        render: () => {
+            if (anxietyLevel > 80) return "end_4"; // Heartbreak/Collapse
+            if (anxietyLevel < 30) return "end_1"; // True Love
+            if (anxietyLevel >= 30 && anxietyLevel <= 50) return "end_2"; // Independent Success
+            return "end_3"; // The Darkness Within
+        }
+    },
+
+    // ==========================================
+    // 9 FARKLI SON (Özetlenmiş)
+    // ==========================================
+    end_1: {
+        text: "SON 1: GERÇEK AŞK. Lara ve Kaan tüm zorluklara rağmen birlikte kaldılar. Lara travmalarını yendi.",
         choices: [{ text: "Tekrar Oyna", target: "start", anxietyChange: -1000 }]
     },
-
-    // ==========================================
-    // PANİK ATAK (KÖTÜ SON)
-    // ==========================================
-    panic_attack: {
-        bg: "", 
-        char: "",
-        speaker: "Sistem",
-        text: "!!! PANİK ATAK !!!\nAnksiyete seviyen 70'i aştı! Ares'in kavgası, Eylül'ün bakışları, geçmişte yaşadığın tüm zorbalıklar... Kalbin göğsünü delip çıkacakmış gibi atıyor.",
-        next: "panic_attack_flashback"
+    end_2: {
+        text: "SON 2: BAĞIMSIZ BAŞARI. Lara kimseye güvenmedi ama kendi gücünü buldu. Çok başarılı bir iş kadını oldu.",
+        choices: [{ text: "Tekrar Oyna", target: "start", anxietyChange: -1000 }]
     },
-    panic_attack_flashback: {
-        bg: "",
-        char: "",
-        speaker: "Annesi (Flashback)",
-        text: "'Sen zayıfsın Lara! Hep böyle zavallı kalacaksın!'",
-        next: "panic_attack_2"
+    end_3: {
+        text: "SON 3: İÇERİDEKİ KARANLIK. Lara başarılı oldu ama Eylül gibi soğuk ve yalnız birine dönüştü.",
+        choices: [{ text: "Tekrar Oyna", target: "start", anxietyChange: -1000 }]
     },
-    panic_attack_2: {
-        bg: "",
-        speaker: "Lara",
-        text: "Nefes... alamıyorum... Bana bakıyorlar... Annem haklıydı... Lütfen... durun...",
-        next: "panic_attack_3"
+    end_4: {
+        text: "SON 4: HAYAL KIRIKLIĞI. Kaan onu yarı yolda bıraktı ve Lara tekrar kabuslarına döndü.",
+        choices: [{ text: "Tekrar Oyna", target: "start", anxietyChange: -1000 }]
     },
-    panic_attack_3: {
-        bg: "/assets/library_bg_1778962737349.png",
-        char: "",
-        speaker: "Vedat (Babası)",
-        text: "Lara! Kızım, buradayım! Derin nefes al... Sadece benim sesime odaklan. Geçecek, baban yanında...",
-        next: "panic_attack_end"
+    end_5: {
+        text: "SON 5: AİLE BAĞI. Lara her şeyi bıraktı ve babasıyla huzurlu, sessiz bir hayata başladı.",
+        choices: [{ text: "Tekrar Oyna", target: "start", anxietyChange: -1000 }]
     },
-    panic_attack_end: {
-        speaker: "Sistem",
-        text: "DRAMATİK SON (Babanın Şefkati): Annenin karanlık hatıraları seni yuttu. Ancak tam o çaresiz anda baban Vedat seni buldu. Kaan'ı o gün kaybetsen de, babanın sana sarılmasıyla hayata yeniden tutunmak için büyük bir adım attın.",
-        choices: [{ text: "Baştan Başla", target: "start", anxietyChange: -1000 }]
+    end_6: {
+        text: "SON 6: YARIM KALAN AŞK. Kaan ve Lara birbirlerini sevdiler ama hayat onları ayırdı.",
+        choices: [{ text: "Tekrar Oyna", target: "start", anxietyChange: -1000 }]
+    },
+    end_7: {
+        text: "SON 7: TOKSİK DÖNGÜ. Kaan'la birlikteler ama sürekli kavga ediyorlar ve Eylül hâlâ peşlerinde.",
+        choices: [{ text: "Tekrar Oyna", target: "start", anxietyChange: -1000 }]
+    },
+    end_8: {
+        text: "SON 8: İNTİKAM. Lara, Eylül ve Ares'i bitirdi ama bu süreçte merhametini kaybetti.",
+        choices: [{ text: "Tekrar Oyna", target: "start", anxietyChange: -1000 }]
+    },
+    end_9: {
+        text: "SON 9: YENİ UFUKLAR. Lara şehri terk etti ve kimsenin onu tanımadığı bir yerde huzuru buldu.",
+        choices: [{ text: "Tekrar Oyna", target: "start", anxietyChange: -1000 }]
     }
 };
 
@@ -490,7 +492,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     function updateAnxiety(change) {
         if(change === -1000) {
-            anxietyLevel = 20; // reset
+            anxietyLevel = 20;
         } else {
             anxietyLevel += change;
         }
@@ -501,7 +503,6 @@ document.addEventListener("DOMContentLoaded", () => {
         anxietyValueEl.textContent = anxietyLevel;
         anxietyBarFill.style.width = anxietyLevel + "%";
 
-        // Renk değiştirme ve efekt
         if(anxietyLevel >= 70) {
             anxietyBarFill.style.background = "red";
             anxietyHud.classList.add("panic-mode");
@@ -523,14 +524,19 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     function renderNode() {
-        // Eğer panik atağı tetiklendiyse (ve şu an panic node'unda değilsek)
-        if(anxietyLevel > 70 && !currentNode.startsWith("panic_attack")) {
-            currentNode = "panic_attack";
+        let node = story[currentNode];
+
+        // Dinamik son belirleme mantığı
+        if (node.render) {
+            currentNode = node.render();
+            node = story[currentNode];
         }
 
-        const node = story[currentNode];
-        
-        // Arka plan güncelleme
+        if (anxietyLevel >= 100 && currentNode !== "end_4" && currentNode !== "end_5") {
+            currentNode = "end_4";
+            node = story[currentNode];
+        }
+
         if (node.bg !== undefined) {
             if (node.bg === "") {
                 bgLayer.style.backgroundImage = "none";
@@ -540,7 +546,6 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         }
         
-        // Karakter güncelleme
         if (node.char !== undefined) {
             if (node.char === "") {
                 charSprite.style.display = "none";
@@ -550,7 +555,6 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         }
         
-        // İsim kutusu
         if (node.speaker && node.speaker !== "") {
             speakerName.textContent = node.speaker;
             speakerName.style.display = "block";
@@ -558,10 +562,8 @@ document.addEventListener("DOMContentLoaded", () => {
             speakerName.style.display = "none";
         }
         
-        // Metin daktilo efekti
-        typeWriter(node.text, 0);
+        typeWriter(node.text || "", 0);
         
-        // Seçenekler veya ilerleme
         if (node.choices) {
             choicesContainer.innerHTML = "";
             node.choices.forEach(choice => {
@@ -581,11 +583,7 @@ document.addEventListener("DOMContentLoaded", () => {
             document.getElementById('next-indicator').style.display = 'none';
         } else {
             choicesContainer.style.display = "none";
-            if (node.end) {
-                document.getElementById('next-indicator').style.display = 'none';
-            } else {
-                document.getElementById('next-indicator').style.display = 'block';
-            }
+            document.getElementById('next-indicator').style.display = node.next ? 'block' : 'none';
         }
     }
 
@@ -611,7 +609,7 @@ document.addEventListener("DOMContentLoaded", () => {
             isTyping = false;
             return;
         }
-        if (node.choices || node.end) return; 
+        if (node.choices) return; 
         
         if (node.next) {
             currentNode = node.next;

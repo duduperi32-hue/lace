@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lace: Gölgelerden Zirveye</title>
+    <title>Lara: Gölgelerden Zirveye</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
@@ -42,9 +42,15 @@
         
         <!-- Başlangıç Ekranı -->
         <div id="start-screen">
-            <h1>Lara: Gölgelerden Zirveye</h1>
-            <p>Seçimleriniz hikayenin sonunu belirleyecek.</p>
-            <button id="start-btn">Oyuna Başla</button>
+            <div class="overlay"></div>
+            <div class="content">
+                <h1 class="title-glow">Lara: Gölgelerden Zirveye</h1>
+                <p class="subtitle">Her seçim bir yara, her yara bir hikaye...</p>
+                <div class="menu-buttons">
+                    <button id="start-btn" class="main-btn">Hikayeye Başla</button>
+                    <button id="credits-btn" class="secondary-btn">Yapımcılar</button>
+                </div>
+            </div>
         </div>
     </div>
 
