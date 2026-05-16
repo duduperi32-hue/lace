@@ -763,8 +763,26 @@ document.addEventListener("DOMContentLoaded", () => {
 
     let isMuted = false;
 
+    const creditsBtn = document.getElementById('credits-btn');
+    const creditsModal = document.getElementById('credits-modal');
+    const closeCredits = document.getElementById('close-credits');
+
     startBtn.addEventListener('click', startGame);
     dialogueBox.addEventListener('click', advanceStory);
+    
+    creditsBtn.addEventListener('click', () => {
+        creditsModal.style.display = 'block';
+    });
+
+    closeCredits.addEventListener('click', () => {
+        creditsModal.style.display = 'none';
+    });
+
+    window.addEventListener('click', (event) => {
+        if (event.target == creditsModal) {
+            creditsModal.style.display = 'none';
+        }
+    });
     
     muteBtn.addEventListener('click', () => {
         isMuted = !isMuted;
