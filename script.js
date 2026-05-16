@@ -2,7 +2,7 @@ let anxietyLevel = 20;
 
 const story = {
     start: {
-        bg: "/assets/library_bg_1778962737349.png",
+        bg: "assets/library_bg_1778962737349.png",
         char: "",
         speaker: "",
         text: "Lara: Gölgelerden Zirveye\nHer seçim bir yara, her yara bir hikaye...\nAnksiyete barına dikkat edin!",
@@ -15,8 +15,8 @@ const story = {
     // BÖLÜM 1: GÖLGELERİN ARASINDA (UZATILMIŞ)
     // ==========================================
     ch1_1: {
-        bg: "/assets/garden_bg_1778962904703.png",
-        char: "/assets/vn_character_sprite_1778962030093.png",
+        bg: "assets/garden_bg_1778962904703.png",
+        char: "assets/vn_character_sprite_1778962030093.png",
         speaker: "Lara",
         text: "(Bölüm 1) Okulun devasa kapısının önünde duruyorum. Demir parmaklıklar sanki bir hapishanenin girişini andırıyor. Ellerim her zamanki gibi titriyor.",
         next: "ch1_2"
@@ -34,8 +34,8 @@ const story = {
         next: "ch1_4"
     },
     ch1_4: {
-        bg: "/assets/garden_bg_1778962904703.png",
-        char: "/assets/vn_character_sprite_1778962030093.png",
+        bg: "assets/garden_bg_1778962904703.png",
+        char: "assets/vn_character_sprite_1778962030093.png",
         speaker: "Lara",
         text: "Annemin sesi... Binlerce kilometre uzakta olmasına rağmen kulağımın dibinde bağırıyor sanki. Yavaşça içeri adım atıyorum.",
         next: "ch1_5"
@@ -69,7 +69,7 @@ const story = {
         next: "ch1_9"
     },
     ch1_9: {
-        bg: "/assets/vn_classroom_bg_1778961836745.png",
+        bg: "assets/vn_classroom_bg_1778961836745.png",
         speaker: "Sistem",
         text: "Sınıfa girdiğinde en arka köşedeki boş sırayı gözüne kestiriyorsun. Orası güvenli, orası uzak.",
         next: "ch2_1"
@@ -79,7 +79,7 @@ const story = {
     // BÖLÜM 2: ÇARPIŞMA VE KIVILCIM (UZATILMIŞ)
     // ==========================================
     ch2_1: {
-        bg: "/assets/vn_classroom_bg_1778961836745.png",
+        bg: "assets/vn_classroom_bg_1778961836745.png",
         speaker: "Sistem",
         text: "(Bölüm 2) İlk dersler bitti. Karnındaki o kramp hiç geçmedi. Bir şeyler içmek için kantine gitmeye karar veriyorsun.",
         next: "ch2_2"
@@ -101,8 +101,8 @@ const story = {
         next: "ch2_5"
     },
     ch2_5: {
-        bg: "/assets/vn_classroom_bg_1778961836745.png",
-        char: "/assets/kaan_sprite_1778962129326.png",
+        bg: "assets/vn_classroom_bg_1778961836745.png",
+        char: "assets/kaan_sprite_1778962129326.png",
         speaker: "Kaan",
         text: "Cidden mi?! İlk günden beni mi buldun sen? Önüne baksana kızım!",
         next: "ch2_6"
@@ -113,7 +113,7 @@ const story = {
         next: "ch2_7"
     },
     ch2_7: {
-        char: "/assets/vn_character_sprite_1778962030093.png",
+        char: "assets/vn_character_sprite_1778962030093.png",
         speaker: "Lara",
         text: "(Dizlerim titriyor. Annemin 'sakar' dediği anlar gözümün önüne geliyor. Konuşamıyorum.)",
         choices: [
@@ -141,7 +141,7 @@ const story = {
     // BÖLÜM 3: GÖLGE ADAM: ARES (UZATILMIŞ)
     // ==========================================
     ch3_1: {
-        bg: "/assets/garden_bg_1778962904703.png",
+        bg: "assets/garden_bg_1778962904703.png",
         speaker: "Sistem",
         text: "(Bölüm 3) Bahçenin en kuytu köşesindeki banka oturdun. Ağlamamak için kendini zor tutuyorsun.",
         next: "ch3_2"
@@ -152,7 +152,7 @@ const story = {
         next: "ch3_3"
     },
     ch3_3: {
-        char: "/assets/ARES.png",
+        char: "assets/ARES.png",
         speaker: "Ares",
         text: "Ağlama. Kaan sadece gösteriş yapmayı sever. O gömleğin aynısından dolabında on tane daha vardır.",
         next: "ch3_4"
@@ -202,8 +202,8 @@ const story = {
         next: "ch4_3"
     },
     ch4_3: {
-        bg: "/assets/library_bg_1778962737349.png",
-        char: "/assets/vn_character_sprite_1778962030093.png",
+        bg: "assets/library_bg_1778962737349.png",
+        char: "assets/vn_character_sprite_1778962030093.png",
         speaker: "Lara",
         text: "Nefesim kesiliyor. Ellerimle kulaklarımı kapatıyorum ama ses içeriden geliyor. Karanlık oda... Odanın soğukluğunu hala tenimde hissediyorum.",
         next: "ch4_4"
@@ -226,8 +226,8 @@ const story = {
     // BÖLÜM 5: SAHTE DOSTLUK TEKLİFİ (UZATILMIŞ)
     // ==========================================
     ch5_1: {
-        bg: "/assets/vn_classroom_bg_1778961836745.png",
-        char: "/assets/eylul_sprite_1778962140020.png",
+        bg: "assets/vn_classroom_bg_1778961836745.png",
+        char: "assets/eylul_sprite_1778962140020.png",
         speaker: "Eylül",
         text: "(Bölüm 5) Selam canım! Ben Eylül. Dün Kaan'la olan o 'kazayı' duydum. Kaan adına senden özür dilemek istedim, o bazen çok kaba olabiliyor.",
         next: "ch5_2"
@@ -265,7 +265,7 @@ const story = {
     // BÖLÜM 6: GECE GELEN MESAJ (UZATILMIŞ)
     // ==========================================
     ch6_1: {
-        bg: "/assets/library_bg_1778962737349.png",
+        bg: "assets/library_bg_1778962737349.png",
         speaker: "Sistem",
         text: "(Bölüm 6) Gece yarısı odamda ders çalışırken telefonum masanın üzerinde titredi. Kalbim yerinden çıkacak gibi oldu.",
         next: "ch6_2"
@@ -303,13 +303,13 @@ const story = {
     // BÖLÜM 7: ÇATIDAKİ SIRLAR (UZATILMIŞ)
     // ==========================================
     ch7_1: {
-        bg: "/assets/vn_classroom_bg_1778961836745.png",
+        bg: "assets/vn_classroom_bg_1778961836745.png",
         speaker: "Sistem",
         text: "(Bölüm 7) Okulun en üst katına, kimsenin uğramadığı o eski çatı katına çıktım. Hava almak istiyordum.",
         next: "ch7_2"
     },
     ch7_2: {
-        char: "/assets/kaan_sprite_1778962129326.png",
+        char: "assets/kaan_sprite_1778962129326.png",
         speaker: "Kaan",
         text: "Demek sen de gizli sığınaklar keşfetmeyi seviyorsun Lara. Burası benim kaçış noktam.",
         next: "ch7_3"
@@ -349,8 +349,8 @@ const story = {
     // (Output sınırları nedeniyle tüm bölümleri bu detayda yazıyorum)
 
     ch8_1: {
-        bg: "/assets/garden_bg_1778962904703.png",
-        char: "/assets/ARES.png",
+        bg: "assets/garden_bg_1778962904703.png",
+        char: "assets/ARES.png",
         speaker: "Ares",
         text: "(Bölüm 8) Kaan'la çatıda ne yapıyordun Lara? Sana uyardığımı sanıyordum. Eylül her şeyi gördü.",
         next: "ch8_2"
@@ -370,13 +370,13 @@ const story = {
     },
 
     ch9_1: {
-        bg: "/assets/vn_classroom_bg_1778961836745.png",
+        bg: "assets/vn_classroom_bg_1778961836745.png",
         speaker: "Sistem",
         text: "(Bölüm 9) Koridorlarda fısıltılar artık çığlığa dönüştü. Eylül sınıfın ortasında durmuş, telefonuna bakarak gülüyor.",
         next: "ch9_2"
     },
     ch9_2: {
-        char: "/assets/eylul_sprite_1778962140020.png",
+        char: "assets/eylul_sprite_1778962140020.png",
         speaker: "Eylül",
         text: "Ah Lara! Ne kadar da tatlı bir fotoğraf bu. Kaan'la çatıda... Ne kadar da masum görünüyorsun. Yazık...",
         next: "ch9_3"
@@ -391,13 +391,13 @@ const story = {
     },
 
     ch10_1: {
-        bg: "/assets/garden_bg_1778962904703.png",
+        bg: "assets/garden_bg_1778962904703.png",
         speaker: "Sistem",
         text: "(Bölüm 10) Ares, okul bahçesinde Kaan'ı bekliyor. Kaan geldiğinde Ares üzerine atılıyor.",
         next: "ch10_2"
     },
     ch10_2: {
-        char: "/assets/ARES.png",
+        char: "assets/ARES.png",
         speaker: "Ares",
         text: "Onu ağlattın! Onu Eylül'ün önüne attın! Senin derdin ne Kaan!",
         next: "ch10_3"
@@ -409,8 +409,8 @@ const story = {
     },
 
     ch11_1: {
-        bg: "/assets/library_bg_1778962737349.png",
-        char: "/assets/kaan_sprite_1778962129326.png",
+        bg: "assets/library_bg_1778962737349.png",
+        char: "assets/kaan_sprite_1778962129326.png",
         speaker: "Kaan",
         text: "(Bölüm 11) (Nefes nefese, kaşı kanıyor) Lara... Buraya gelme. Ares gerçekten delirdi... Ama haklıydı, seni koruyamadım.",
         next: "ch11_2"
@@ -425,14 +425,14 @@ const story = {
     },
 
     ch12_1: {
-        bg: "/assets/library_bg_1778962737349.png",
-        char: "/assets/eylul_sprite_1778962140020.png",
+        bg: "assets/library_bg_1778962737349.png",
+        char: "assets/eylul_sprite_1778962140020.png",
         speaker: "Eylül",
         text: "(Bölüm 12) Lara, gerçekten üzgünüm. O fotoğrafı ben yaymadım, yemin ederim. Gel, kütüphanede konuşalım.",
         next: "ch12_2"
     },
     ch12_2: {
-        char: "/assets/vn_character_sprite_1778962030093.png",
+        char: "assets/vn_character_sprite_1778962030093.png",
         speaker: "Lara",
         text: "Eylül'e her şeyi anlatıyorum... Karanlık odayı, annemi, korkularımı... Belki de tek ihtiyacım olan bir dosttur.",
         next: "ch13_1"
@@ -445,13 +445,13 @@ const story = {
     },
 
     ch14_1: {
-        bg: "/assets/vn_classroom_bg_1778961836745.png",
+        bg: "assets/vn_classroom_bg_1778961836745.png",
         speaker: "Sistem",
         text: "(Bölüm 14) Okul hoparlörlerinden bir ses yükseliyor. Senin sesin. 'Annem beni karanlık odaya kilitlerdi...' Herkes donup kalıyor.",
         next: "ch14_2"
     },
     ch14_2: {
-        char: "/assets/eylul_sprite_1778962140020.png",
+        char: "assets/eylul_sprite_1778962140020.png",
         speaker: "Eylül",
         text: "Herkes senin ne kadar 'hasarlı' olduğunu duymalıydı Lara. Kaan senin gibi bir deliyle mi ilgilenecekti sanıyorsun?",
         choices: [
@@ -473,7 +473,7 @@ const story = {
     },
 
     ch16_1: {
-        bg: "/assets/library_bg_1778962737349.png",
+        bg: "assets/library_bg_1778962737349.png",
         speaker: "Sistem",
         text: "(Bölüm 16) Evdeyiz. Babam bana sıcak çikolata yapmış. Annesinin o buz gibi evinden sonra burası bir cennet gibi.",
         next: "ch16_2"
@@ -488,15 +488,15 @@ const story = {
     },
 
     ch17_1: {
-        bg: "/assets/vn_classroom_bg_1778961836745.png",
+        bg: "assets/vn_classroom_bg_1778961836745.png",
         speaker: "Sistem",
         text: "(Bölüm 17) Pazartesi sabahı. Okula geri dönüyorum. Kaan kapıda beni bekliyor. Gözlerinde büyük bir pişmanlık var.",
         next: "ch18_1"
     },
 
     ch18_1: {
-        bg: "/assets/garden_bg_1778962904703.png",
-        char: "/assets/eylul_sprite_1778962140020.png",
+        bg: "assets/garden_bg_1778962904703.png",
+        char: "assets/eylul_sprite_1778962140020.png",
         speaker: "Eylül",
         text: "(Bölüm 18) Hâlâ pes etmedin mi Lara? Ne kadar inatçısın. Ama bitti, artık kimse seninle konuşmayacak.",
         choices: [
@@ -506,8 +506,8 @@ const story = {
     },
 
     ch19_1: {
-        bg: "/assets/garden_bg_1778962904703.png",
-        char: "/assets/kaan_sprite_1778962129326.png",
+        bg: "assets/garden_bg_1778962904703.png",
+        char: "assets/kaan_sprite_1778962129326.png",
         speaker: "Kaan",
         text: "(Bölüm 19) Eylül, yeter! Lara'ya yaptıkların için bedel ödeyeceksin. Okul yönetimiyle konuştum, tüm ses kayıtlarını onlara verdim.",
         next: "ch20_1"
@@ -523,7 +523,7 @@ const story = {
     // BÖLÜM 21: OKULUN TEPKİSİ
     // ==========================================
     ch21_1: {
-        bg: "/assets/vn_classroom_bg_1778961836745.png",
+        bg: "assets/vn_classroom_bg_1778961836745.png",
         speaker: "Sistem",
         text: "(Bölüm 21) Ses kaydı okulda bomba etkisi yarattı. Bazıları sana acıyarak bakıyor, bazıları ise hala fısıldaşıyor.",
         next: "ch21_2"
@@ -541,8 +541,8 @@ const story = {
     // BÖLÜM 22: KAAN'IN ARAŞTIRMASI
     // ==========================================
     ch22_1: {
-        bg: "/assets/library_bg_1778962737349.png",
-        char: "/assets/kaan_sprite_1778962129326.png",
+        bg: "assets/library_bg_1778962737349.png",
+        char: "assets/kaan_sprite_1778962129326.png",
         speaker: "Kaan",
         text: "(Bölüm 22) Lara, Eylül'ün bu kaydı tek başına ele geçirdiğine inanmıyorum. Birinden yardım almış olmalı.",
         next: "ch22_2"
@@ -560,8 +560,8 @@ const story = {
     // BÖLÜM 23: ARES'İN PİŞMANLIĞI
     // ==========================================
     ch23_1: {
-        bg: "/assets/garden_bg_1778962904703.png",
-        char: "/assets/ARES.png",
+        bg: "assets/garden_bg_1778962904703.png",
+        char: "assets/ARES.png",
         speaker: "Ares",
         text: "(Bölüm 23) Lara... Özür dilerim. Eylül'ün ne kadar ileri gidebileceğini biliyordum ama sessiz kaldım. Kendimi affedemiyorum.",
         next: "ch23_2"
@@ -579,13 +579,13 @@ const story = {
     // BÖLÜM 24: GÜÇLENME
     // ==========================================
     ch24_1: {
-        bg: "/assets/vn_classroom_bg_1778961836745.png",
+        bg: "assets/vn_classroom_bg_1778961836745.png",
         speaker: "Sistem",
         text: "(Bölüm 24) Okulda bir değişim var. Artık senden kaçmıyorlar. İnsanlar senin cesaretine hayran kalmaya başladı.",
         next: "ch24_2"
     },
     ch24_2: {
-        char: "/assets/vn_character_sprite_1778962030093.png",
+        char: "assets/vn_character_sprite_1778962030093.png",
         speaker: "Lara",
         text: "İlk kez kendimi bir yere ait hissediyorum. Gölgelerden çıkmak ne kadar da ferahlatıcıymış...",
         next: "ch25_1"
@@ -595,13 +595,13 @@ const story = {
     // BÖLÜM 25: OKUL BALOSU (SON KOZLAR)
     // ==========================================
     ch25_1: {
-        bg: "/assets/library_bg_1778962737349.png",
+        bg: "assets/library_bg_1778962737349.png",
         speaker: "Sistem",
         text: "(Bölüm 25) Yıl sonu balosu yaklaşıyor. Eylül bu gece için büyük bir 'sürpriz' hazırladığını duyurdu.",
         next: "ch25_2"
     },
     ch25_2: {
-        char: "/assets/eylul_sprite_1778962140020.png",
+        char: "assets/eylul_sprite_1778962140020.png",
         speaker: "Eylül",
         text: "Bakalım bu gece sonunda hala o kadar dik durabilecek misin Lara. Herkes senin gerçek yüzünü görecek.",
         next: "ch26_1"
@@ -611,13 +611,13 @@ const story = {
     // BÖLÜM 26: İTTİFAK
     // ==========================================
     ch26_1: {
-        bg: "/assets/garden_bg_1778962904703.png",
+        bg: "assets/garden_bg_1778962904703.png",
         speaker: "Sistem",
         text: "(Bölüm 26) Kaan ve Ares ilk kez yan yana duruyor. Tek bir amaçları var: Lara'yı korumak.",
         next: "ch26_2"
     },
     ch26_2: {
-        char: "/assets/kaan_sprite_1778962129326.png",
+        char: "assets/kaan_sprite_1778962129326.png",
         speaker: "Kaan",
         text: "Eylül'ün ne planladığını biliyoruz Ares. Bu sefer izin vermeyeceğiz.",
         next: "ch27_1"
@@ -627,7 +627,7 @@ const story = {
     // BÖLÜM 27: EYLÜL'ÜN DÜŞÜŞÜ
     // ==========================================
     ch27_1: {
-        bg: "/assets/library_bg_1778962737349.png",
+        bg: "assets/library_bg_1778962737349.png",
         speaker: "Sistem",
         text: "(Bölüm 27) Balonun tam ortasında Eylül sahneye çıkar. Ama tam konuşacakken ekranlarda kendi sinsi planları belirir.",
         next: "ch27_2"
@@ -642,13 +642,13 @@ const story = {
     // BÖLÜM 28: İYİLEŞME BAHÇESİ
     // ==========================================
     ch28_1: {
-        bg: "/assets/garden_bg_1778962904703.png",
+        bg: "assets/garden_bg_1778962904703.png",
         speaker: "Sistem",
         text: "(Bölüm 28) Balonun gürültüsünden kaçıp bahçeye çıkarsın. Kaan oradadır.",
         next: "ch28_2"
     },
     ch28_2: {
-        char: "/assets/kaan_sprite_1778962129326.png",
+        char: "assets/kaan_sprite_1778962129326.png",
         speaker: "Kaan",
         text: "Her şey bitti Lara. Artık özgürsün. Kimse seni bir daha karanlık bir odaya kilitleyemez.",
         choices: [
@@ -661,7 +661,7 @@ const story = {
     // BÖLÜM 29: BABANIN ONAYI
     // ==========================================
     ch29_1: {
-        bg: "/assets/library_bg_1778962737349.png",
+        bg: "assets/library_bg_1778962737349.png",
         speaker: "Sistem",
         text: "(Bölüm 29) Baban Vedat okula gelir. Kaan ile tanışırlar.",
         next: "ch29_2"
@@ -676,7 +676,7 @@ const story = {
     // BÖLÜM 30: YENİ UFUKLAR (FİNAL)
     // ==========================================
     ch30_1: {
-        bg: "/assets/garden_bg_1778962904703.png",
+        bg: "assets/garden_bg_1778962904703.png",
         speaker: "Sistem",
         text: "(Bölüm 30) Lara okulun bahçesinde ufka bakıyor. Gölgelerden zirveye uzanan bu yolculuk burada bitiyor... Ya da yeni başlıyor.",
         next: "decide_end"
@@ -743,6 +743,7 @@ const story = {
 let currentNode = "start";
 let typewriterTimeout = null;
 let isTyping = false;
+let nodeHistory = [];
 
 document.addEventListener("DOMContentLoaded", () => {
     const bgLayer = document.getElementById('bg-layer');
@@ -766,9 +767,11 @@ document.addEventListener("DOMContentLoaded", () => {
     const creditsBtn = document.getElementById('credits-btn');
     const creditsModal = document.getElementById('credits-modal');
     const closeCredits = document.getElementById('close-credits');
+    const backBtn = document.getElementById('back-btn');
 
     startBtn.addEventListener('click', startGame);
     dialogueBox.addEventListener('click', advanceStory);
+    backBtn.addEventListener('click', goBack);
     
     creditsBtn.addEventListener('click', () => {
         creditsModal.style.display = 'block';
@@ -828,7 +831,9 @@ document.addEventListener("DOMContentLoaded", () => {
         startScreen.style.display = 'none';
         currentNode = "start";
         anxietyLevel = 20;
+        nodeHistory = [];
         updateAnxiety(0);
+        updateBackBtn();
         
         // Müzik çalma denemesi
         if (!isMuted) {
@@ -839,6 +844,21 @@ document.addEventListener("DOMContentLoaded", () => {
                     console.log("Otomatik oynatma engellendi veya hata oluştu: ", e);
                 });
         }
+        renderNode();
+    }
+
+    function updateBackBtn() {
+        backBtn.disabled = nodeHistory.length === 0;
+        backBtn.style.display = (currentNode === 'start' || startScreen.style.display !== 'none') ? 'none' : 'flex';
+    }
+
+    function goBack() {
+        if (nodeHistory.length === 0) return;
+        const prev = nodeHistory.pop();
+        currentNode = prev.node;
+        anxietyLevel = prev.anxiety;
+        updateAnxiety(0);
+        updateBackBtn();
         renderNode();
     }
 
@@ -930,13 +950,17 @@ document.addEventListener("DOMContentLoaded", () => {
         if (node.choices) return; 
         
         if (node.next) {
+            nodeHistory.push({ node: currentNode, anxiety: anxietyLevel });
             currentNode = node.next;
+            updateBackBtn();
             renderNode();
         }
     }
 
     function makeChoice(targetNode) {
+        nodeHistory.push({ node: currentNode, anxiety: anxietyLevel });
         currentNode = targetNode;
+        updateBackBtn();
         renderNode();
     }
 });
