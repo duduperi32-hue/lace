@@ -805,8 +805,15 @@ document.addEventListener("DOMContentLoaded", () => {
         currentNode = "start";
         anxietyLevel = 20;
         updateAnxiety(0);
+        
+        // Müzik çalma denemesi
         if (!isMuted) {
-            bgMusic.play().catch(e => console.log("Müzik başlatılamadı: ", e));
+            bgMusic.volume = 0.5; // %50 ses seviyesi
+            bgMusic.play()
+                .then(() => console.log("BGM çalmaya başladı"))
+                .catch(e => {
+                    console.log("Otomatik oynatma engellendi veya hata oluştu: ", e);
+                });
         }
         renderNode();
     }
