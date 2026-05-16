@@ -3,108 +3,179 @@ const story = {
         bg: "/public/assets/library_bg_1778962737349.png",
         char: "/public/assets/kaan_sprite_1778962129326.png",
         speaker: "Kaan",
-        text: "Matematik evrenin dilidir derler... Ama senin o yeşil gözlerin hiçbir dilde konuşmuyor, Lace.",
+        text: "Matematik evrenin dilidir derler... Ama senin o yeşil gözlerin hiçbir dilde konuşmuyor, Lara.",
         next: "node1"
     },
     node1: {
         char: "/public/assets/vn_character_sprite_1778962030093.png",
-        speaker: "Lace",
+        speaker: "Lara",
         text: "(Okulun en popüler çocuğu Kaan, kütüphanenin bu ıssız köşesinde beni nasıl buldu?)",
         choices: [
-            { text: "Ona güven ve sıcak davran", target: "trust_route_garden" },
-            { text: "Mesafeni koru ve sorgula", target: "distrust_route_classroom" }
+            { text: "Onu görmezden gel ve kütüphaneden çık", target: "ending_alone_happy" },
+            { text: "Ona gülümse ve yanına oturmasına izin ver", target: "date_1" }
         ]
     },
 
     // ----------------------------------------------------
-    // YOL 1: GÜVEN YOLU (GÖLGELERDEN ZİRVEYE)
+    // SON 2: HİÇ TANIŞMADILAR (BAĞIMSIZ VE MUTLU)
     // ----------------------------------------------------
-    trust_route_garden: {
+    ending_alone_happy: {
+        bg: "/public/assets/library_bg_1778962737349.png",
+        speaker: "Lara",
+        text: "Kaan'ı duymazdan geldin. Kitaplarını toplayıp oradan ayrıldın. Kaan senin hayatına hiç girmedi.",
+        next: "ending_alone_happy_2"
+    },
+    ending_alone_happy_2: {
+        bg: "/public/assets/garden_bg_1778962904703.png",
+        speaker: "Lara",
+        text: "MUTLU SON (Bağımsızlık): Yıllar geçti. Lara, kimseye boyun eğmeden, sadece kendi zekasıyla dünyanın en büyük yazılım şirketlerinden birini kurdu. Zirvede tek başına ama çok mutluydu.",
+        end: true
+    },
+
+    // ----------------------------------------------------
+    // DATE SERİSİ (EN AZ 10 DATE)
+    // ----------------------------------------------------
+    date_1: {
+        bg: "/public/assets/library_bg_1778962737349.png",
+        char: "/public/assets/kaan_sprite_1778962129326.png",
+        speaker: "Kaan",
+        text: "1. BULUŞMA: Bana bir şans verdiğin için teşekkürler Lara. Seninle sadece ders çalışmak bile güzel.",
+        next: "date_2"
+    },
+    date_2: {
         bg: "/public/assets/garden_bg_1778962904703.png",
         char: "/public/assets/kaan_sprite_1778962129326.png",
         speaker: "Kaan",
-        text: "Seni hep uzaktan izliyordum Lace. O soğuk maskenin altında sıcacık bir kalbin olduğunu biliyordum.",
-        next: "trust_route_eylul_enters"
+        text: "2. BULUŞMA: (Okul Bahçesi) Bugün hava harika. Seninle çimlerde oturup bulutları izlemek beni rahatlatıyor.",
+        next: "date_3"
     },
-    trust_route_eylul_enters: {
+    date_3: {
+        bg: "/public/assets/vn_classroom_bg_1778961836745.png",
+        char: "/public/assets/kaan_sprite_1778962129326.png",
+        speaker: "Kaan",
+        text: "3. BULUŞMA: (Boş Sınıf) Herkes gittikten sonra burada baş başa kalıp müzik dinlemek... Sanırım favori aktivitem oldu.",
+        next: "date_4"
+    },
+    date_4: {
+        bg: "/public/assets/library_bg_1778962737349.png",
+        char: "/public/assets/kaan_sprite_1778962129326.png",
+        speaker: "Kaan",
+        text: "4. BULUŞMA: (Hafta Sonu Kütüphanesi) Lara, sen okurken gözlerinin daldığı o anları izlemeye bayılıyorum.",
+        next: "date_5"
+    },
+    date_5: {
         bg: "/public/assets/garden_bg_1778962904703.png",
         char: "/public/assets/eylul_sprite_1778962140020.png",
         speaker: "Eylül",
-        text: "Aaa Kaan! Demek buradaydın. Ve yanında... Lace? İnanamıyorum. Lace senin sadece zenginliğinle ilgileniyor Kaan, herkes bunu konuşuyor!",
-        next: "trust_route_choice"
+        text: "5. BULUŞMA: (Piknik) Aaa! Kaan ve Lara? Siz ne zamandır böylesiniz? Lara, sen Kaan'ı sadece statüsü için kullanmıyor musun canım?",
+        next: "date_5_choice"
     },
-    trust_route_choice: {
+    date_5_choice: {
         char: "/public/assets/vn_character_sprite_1778962030093.png",
-        speaker: "Lace",
-        text: "(Eylül yıllardır bana eziyet ediyor. Şimdi de Kaan'ı benden koparmak istiyor.)",
+        speaker: "Lara",
+        text: "(Eylül yine zehrini saçıyor. Ne yapmalıyım?)",
         choices: [
-            { text: "Sessizce geri çekil ve kaç", target: "bad_ending_eylul_wins" },
-            { text: "Eylül'ün yalanlarını yüzüne vur", target: "true_ending_love_wins" }
+            { text: "Kaan'ı savun ve Eylül'ü kov", target: "date_6" },
+            { text: "Eylül'e hak ver ve içindeki karanlığı seç", target: "ending_ambition" }
         ]
     },
-    bad_ending_eylul_wins: {
-        bg: "/public/assets/library_bg_1778962737349.png",
-        speaker: "Lace",
-        text: "KÖTÜ SON: Sessizliğin, Eylül'ün yalanlarını doğru kıldı. Kaan senden uzaklaştı ve tekrar o yalnız kütüphane köşesine mahkum oldun.",
-        end: true
+
+    // ----------------------------------------------------
+    // SON 4: KARANLIK HIRS (EYLÜL GİBİ OLMAK)
+    // ----------------------------------------------------
+    ending_ambition: {
+        bg: "/public/assets/vn_classroom_bg_1778961836745.png",
+        char: "/public/assets/vn_character_sprite_1778962030093.png",
+        speaker: "Lara",
+        text: "'Aslında haklısın Eylül, güç her şeydir.' dedin. Kaan bunu duyduğunda yıkıldı.",
+        next: "ending_ambition_2"
     },
-    true_ending_love_wins: {
-        bg: "/public/assets/garden_bg_1778962904703.png",
-        char: "/public/assets/kaan_sprite_1778962129326.png",
-        speaker: "Kaan",
-        text: "Eylül, yeter! Lace'in gözlerindeki dürüstlüğü senin yalanlarına değişmem. Bizim aramızdan çekil.",
-        next: "true_ending_epilogue"
-    },
-    true_ending_epilogue: {
-        bg: "/public/assets/garden_bg_1778962904703.png",
-        speaker: "Lace",
-        text: "MUTLU SON: Kaan'la el ele verdiniz. Yıllar sonra kendi teknoloji şirketinizi kurduğunuzda, Eylül çoktan unutulmuştu. Artık gökyüzü sizin...",
+    ending_ambition_2: {
+        bg: "/public/assets/vn_classroom_bg_1778961836745.png",
+        speaker: "Lara",
+        text: "TRAJİK SON (Karanlık Hırs): Lara, masumiyetini kaybetti. Manipülatif biri oldu. Zengin ve başarılıydı ama etrafında ona gerçekten değer veren tek bir kişi bile kalmamıştı. Tamamen yalnızdı.",
         end: true
     },
 
     // ----------------------------------------------------
-    // YOL 2: MESAFE YOLU (KARANLIK VE UYANIŞ)
+    // DATE SERİSİ DEVAM (6 - 10)
     // ----------------------------------------------------
-    distrust_route_classroom: {
+    date_6: {
+        bg: "/public/assets/library_bg_1778962737349.png",
+        char: "/public/assets/kaan_sprite_1778962129326.png",
+        speaker: "Kaan",
+        text: "6. BULUŞMA: Beni Eylül'e karşı savunduğun için teşekkürler Lara. Sana olan güvenim sonsuz.",
+        next: "date_7"
+    },
+    date_7: {
         bg: "/public/assets/vn_classroom_bg_1778961836745.png",
         char: "/public/assets/kaan_sprite_1778962129326.png",
         speaker: "Kaan",
-        text: "Zor kızı oynaman hoşuma gidiyor. Okuldan sonra boş sınıfa gel, seninle özel bir 'proje' çalışalım.",
-        next: "classroom_tension"
+        text: "7. BULUŞMA: (Yağmurlu Bir Gün) Dışarıda yağmur yağıyor ama senin yanındayken içim hep ısınıyor.",
+        next: "date_8"
     },
-    classroom_tension: {
-        bg: "/public/assets/vn_classroom_bg_1778961836745.png",
+    date_8: {
+        bg: "/public/assets/garden_bg_1778962904703.png",
         char: "/public/assets/kaan_sprite_1778962129326.png",
         speaker: "Kaan",
-        text: "Neden titriyorsun Lace? Senin gibi zeki bir kız, bu kadar naz yapmamalı. Benim kurallarıma uyacaksın.",
-        next: "distrust_route_choice"
+        text: "8. BULUŞMA: (Gün Batımı) Lara, bugün seninle ilk tanıştığımız günü düşündüm de... İyi ki o masaya oturmuşum.",
+        next: "date_9"
     },
-    distrust_route_choice: {
+    date_9: {
+        bg: "/public/assets/library_bg_1778962737349.png",
+        char: "/public/assets/kaan_sprite_1778962129326.png",
+        speaker: "Kaan",
+        text: "9. BULUŞMA: Mezuniyet yaklaşıyor. Gelecek hakkında çok planım var. Hepsinin merkezinde sen varsın.",
+        next: "date_10"
+    },
+    date_10: {
+        bg: "/public/assets/garden_bg_1778962904703.png",
+        char: "/public/assets/kaan_sprite_1778962129326.png",
+        speaker: "Kaan",
+        text: "10. BULUŞMA: (Büyük İtiraf) Lara... Seni çok seviyorum. Ama sana söylemem gereken çok karanlık bir sırrım var.",
+        next: "date_10_choice"
+    },
+    date_10_choice: {
         char: "/public/assets/vn_character_sprite_1778962030093.png",
-        speaker: "Lace",
-        text: "(Kaan'ın gözlerindeki karanlığı görebiliyorum. Bu o güler yüzlü çocuk değil, bir canavar!)",
+        speaker: "Lara",
+        text: "(Kaan'ın gözlerinde korkutucu bir gölge var. Bu sırra hazır mıyım?)",
         choices: [
-            { text: "Korkuya yenik düş ve itaat et", target: "bad_ending_trauma" },
-            { text: "Ona meydan oku ve kapıya koş", target: "good_ending_empowerment" }
+            { text: "Ona güven, elini sıkıca tut", target: "ending_happy_love" },
+            { text: "Korkuya kapıl ve onu sorgula", target: "ending_betrayal" }
         ]
     },
-    bad_ending_trauma: {
-        bg: "/public/assets/vn_classroom_bg_1778961836745.png",
-        speaker: "Lace",
-        text: "KÖTÜ SON (Gecenin En Soğuk Fonksiyonu): Kaan'ın karanlığı seni yuttu. Kendi zihninin zindanında, çözemediğin o denklemlerle baş başa kaldın.",
+
+    // ----------------------------------------------------
+    // SON 1: MUTLU SON (AŞK VE GÜVEN)
+    // ----------------------------------------------------
+    ending_happy_love: {
+        bg: "/public/assets/garden_bg_1778962904703.png",
+        char: "/public/assets/kaan_sprite_1778962129326.png",
+        speaker: "Kaan",
+        text: "Beni hatalarımla kabul ettiğin için teşekkürler Lara. Hayatım boyunca seni koruyacağım.",
+        next: "ending_happy_love_2"
+    },
+    ending_happy_love_2: {
+        bg: "/public/assets/garden_bg_1778962904703.png",
+        speaker: "Lara",
+        text: "MUTLU SON (Sonsuz Aşk): Lara ve Kaan tüm karanlık sırları aşarak evlendiler. Beraber bir teknoloji imparatorluğu kurup hayatlarının sonuna kadar mutlu yaşadılar.",
         end: true
     },
-    good_ending_empowerment: {
-        bg: "/public/assets/library_bg_1778962737349.png",
-        char: "/public/assets/vn_character_sprite_1778962030093.png",
-        speaker: "Lace",
-        text: "'Ben kimsenin kurbanı değilim!' dedin ve oradan uzaklaştın. Hayatından zehirli insanları çıkardın.",
-        next: "empowerment_epilogue"
+
+    // ----------------------------------------------------
+    // SON 3: TRAJİK İHANET (KALP KIRIKLIĞI)
+    // ----------------------------------------------------
+    ending_betrayal: {
+        bg: "/public/assets/vn_classroom_bg_1778961836745.png",
+        char: "/public/assets/kaan_sprite_1778962129326.png",
+        speaker: "Kaan",
+        text: "Bana güvenmiyorsun demek... Tıpkı diğerleri gibi. Aslında sana oynadığım bir oyundu bu Lara. Eylül haklıydı.",
+        next: "ending_betrayal_2"
     },
-    empowerment_epilogue: {
-        bg: "/public/assets/library_bg_1778962737349.png",
-        speaker: "Lace",
-        text: "GÜÇLÜ SON (Gökyüzünün Rengi): Tek başına ayakların üzerinde durdun. Adaleti sağladın ve dünyanın en başarılı mühendislerinden biri oldun. Kendi kurtarıcın sendin.",
+    ending_betrayal_2: {
+        bg: "/public/assets/vn_classroom_bg_1778961836745.png",
+        speaker: "Lara",
+        text: "TRAJİK SON (İhanet): Kaan'ın acımasız ihaneti Lara'nın ruhunda kapanmaz yaralar açtı. Lara o günden sonra bir daha kimseye güvenemedi ve gölgelere geri döndü.",
         end: true
     }
 };
@@ -136,61 +207,60 @@ document.addEventListener("DOMContentLoaded", () => {
         const node = story[currentNode];
         
         // Arka plan güncelleme
-    if (node.bg !== undefined) {
-        if (node.bg === "") {
-            bgLayer.style.backgroundImage = "none";
-            bgLayer.style.backgroundColor = "black";
-        } else {
-            bgLayer.style.backgroundImage = `url('${node.bg}')`;
+        if (node.bg !== undefined) {
+            if (node.bg === "") {
+                bgLayer.style.backgroundImage = "none";
+                bgLayer.style.backgroundColor = "black";
+            } else {
+                bgLayer.style.backgroundImage = `url('${node.bg}')`;
+            }
         }
-    }
-    
-    // Karakter güncelleme
-    if (node.char !== undefined) {
-        if (node.char === "") {
-            charSprite.style.display = "none";
-        } else {
-            charSprite.src = node.char;
-            charSprite.style.display = "block";
+        
+        // Karakter güncelleme
+        if (node.char !== undefined) {
+            if (node.char === "") {
+                charSprite.style.display = "none";
+            } else {
+                charSprite.src = node.char;
+                charSprite.style.display = "block";
+            }
         }
-    }
-    
-    // İsim kutusu
-    if (node.speaker) {
-        speakerName.textContent = node.speaker;
-        speakerName.style.display = "block";
-    } else {
-        speakerName.style.display = "none";
-    }
-    
-    // Metin daktilo efekti
-    dialogueText.innerHTML = "";
-    typeWriter(node.text, 0);
-    
-    // Seçenekler veya ilerleme
-    if (node.choices) {
-        choicesContainer.innerHTML = "";
-        node.choices.forEach(choice => {
-            const btn = document.createElement('button');
-            btn.className = "choice-btn";
-            btn.textContent = choice.text;
-            btn.onclick = (e) => {
-                e.stopPropagation();
-                makeChoice(choice.target);
-            };
-            choicesContainer.appendChild(btn);
-        });
-        choicesContainer.style.display = "flex";
-        document.getElementById('next-indicator').style.display = 'none';
-    } else {
-        choicesContainer.style.display = "none";
-        if (node.end) {
+        
+        // İsim kutusu
+        if (node.speaker) {
+            speakerName.textContent = node.speaker;
+            speakerName.style.display = "block";
+        } else {
+            speakerName.style.display = "none";
+        }
+        
+        // Metin daktilo efekti
+        typeWriter(node.text, 0);
+        
+        // Seçenekler veya ilerleme
+        if (node.choices) {
+            choicesContainer.innerHTML = "";
+            node.choices.forEach(choice => {
+                const btn = document.createElement('button');
+                btn.className = "choice-btn";
+                btn.textContent = choice.text;
+                btn.onclick = (e) => {
+                    e.stopPropagation();
+                    makeChoice(choice.target);
+                };
+                choicesContainer.appendChild(btn);
+            });
+            choicesContainer.style.display = "flex";
             document.getElementById('next-indicator').style.display = 'none';
         } else {
-            document.getElementById('next-indicator').style.display = 'block';
+            choicesContainer.style.display = "none";
+            if (node.end) {
+                document.getElementById('next-indicator').style.display = 'none';
+            } else {
+                document.getElementById('next-indicator').style.display = 'block';
+            }
         }
     }
-}
 
     function typeWriter(text, index) {
         if (index === 0) {
