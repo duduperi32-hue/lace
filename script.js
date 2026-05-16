@@ -111,29 +111,32 @@ const story = {
 };
 
 let currentNode = "start";
+let typewriterTimeout = null;
+let isTyping = false;
 
-const bgLayer = document.getElementById('bg-layer');
-const charSprite = document.getElementById('char-sprite');
-const speakerName = document.getElementById('speaker-name');
-const dialogueText = document.getElementById('dialogue-text');
-const dialogueBox = document.getElementById('dialogue-box');
-const choicesContainer = document.getElementById('choices-container');
-const startScreen = document.getElementById('start-screen');
-const startBtn = document.getElementById('start-btn');
+document.addEventListener("DOMContentLoaded", () => {
+    const bgLayer = document.getElementById('bg-layer');
+    const charSprite = document.getElementById('char-sprite');
+    const speakerName = document.getElementById('speaker-name');
+    const dialogueText = document.getElementById('dialogue-text');
+    const dialogueBox = document.getElementById('dialogue-box');
+    const choicesContainer = document.getElementById('choices-container');
+    const startScreen = document.getElementById('start-screen');
+    const startBtn = document.getElementById('start-btn');
 
-startBtn.addEventListener('click', startGame);
-dialogueBox.addEventListener('click', advanceStory);
+    startBtn.addEventListener('click', startGame);
+    dialogueBox.addEventListener('click', advanceStory);
 
-function startGame() {
-    startScreen.style.display = 'none';
-    currentNode = "start";
-    renderNode();
-}
+    function startGame() {
+        startScreen.style.display = 'none';
+        currentNode = "start";
+        renderNode();
+    }
 
-function renderNode() {
-    const node = story[currentNode];
-    
-    // Arka plan güncelleme
+    function renderNode() {
+        const node = story[currentNode];
+        
+        // Arka plan güncelleme
     if (node.bg !== undefined) {
         if (node.bg === "") {
             bgLayer.style.backgroundImage = "none";
@@ -190,24 +193,39 @@ function renderNode() {
     }
 }
 
-function typeWriter(text, index) {
-    if (index < text.length) {
-        dialogueText.innerHTML += text.charAt(index);
-        setTimeout(() => typeWriter(text, index + 1), 20); // Daktilo hızı
+    function typeWriter(text, index) {
+        if (index === 0) {
+            isTyping = true;
+            if (typewriterTimeout) clearTimeout(typewriterTimeout);
+            dialogueText.innerHTML = "";
+        }
+        if (index < text.length) {
+            dialogueText.innerHTML += text.charAt(index);
+            typewriterTimeout = setTimeout(() => typeWriter(text, index + 1), 20);
+        } else {
+            isTyping = false;
+        }
     }
-}
 
-function advanceStory() {
-    const node = story[currentNode];
-    if (node.choices || node.end) return; // Seçenek varsa veya son ise tıklama ile ilerleme
-    
-    if (node.next) {
-        currentNode = node.next;
+    function advanceStory() {
+        const node = story[currentNode];
+        if (isTyping) {
+            // Eğer yazı yazılıyorsa hemen tamamla
+            if (typewriterTimeout) clearTimeout(typewriterTimeout);
+            dialogueText.innerHTML = node.text;
+            isTyping = false;
+            return;
+        }
+        if (node.choices || node.end) return; // Seçenek varsa veya son ise tıklama ile ilerleme
+        
+        if (node.next) {
+            currentNode = node.next;
+            renderNode();
+        }
+    }
+
+    function makeChoice(targetNode) {
+        currentNode = targetNode;
         renderNode();
     }
-}
-
-function makeChoice(targetNode) {
-    currentNode = targetNode;
-    renderNode();
-}
+});
