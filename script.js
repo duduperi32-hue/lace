@@ -1,13 +1,13 @@
 const story = {
     start: {
-        bg: "/public/assets/library_bg_1778962737349.png",
-        char: "/public/assets/kaan_sprite_1778962129326.png",
+        bg: "/assets/library_bg_1778962737349.png",
+        char: "/assets/kaan_sprite_1778962129326.png",
         speaker: "Kaan",
         text: "Matematik evrenin dilidir derler... Ama senin o yeşil gözlerin hiçbir dilde konuşmuyor, Lara.",
         next: "node1"
     },
     node1: {
-        char: "/public/assets/vn_character_sprite_1778962030093.png",
+        char: "/assets/vn_character_sprite_1778962030093.png",
         speaker: "Lara",
         text: "(Okulun en popüler çocuğu Kaan, kütüphanenin bu ıssız köşesinde beni nasıl buldu?)",
         choices: [
@@ -20,13 +20,13 @@ const story = {
     // SON 2: HİÇ TANIŞMADILAR (BAĞIMSIZ VE MUTLU)
     // ----------------------------------------------------
     ending_alone_happy: {
-        bg: "/public/assets/library_bg_1778962737349.png",
+        bg: "/assets/library_bg_1778962737349.png",
         speaker: "Lara",
         text: "Kaan'ı duymazdan geldin. Kitaplarını toplayıp oradan ayrıldın. Kaan senin hayatına hiç girmedi.",
         next: "ending_alone_happy_2"
     },
     ending_alone_happy_2: {
-        bg: "/public/assets/garden_bg_1778962904703.png",
+        bg: "/assets/garden_bg_1778962904703.png",
         speaker: "Lara",
         text: "MUTLU SON (Bağımsızlık): Yıllar geçti. Lara, kimseye boyun eğmeden, sadece kendi zekasıyla dünyanın en büyük yazılım şirketlerinden birini kurdu. Zirvede tek başına ama çok mutluydu.",
         end: true
@@ -36,42 +36,42 @@ const story = {
     // DATE SERİSİ (EN AZ 10 DATE)
     // ----------------------------------------------------
     date_1: {
-        bg: "/public/assets/library_bg_1778962737349.png",
-        char: "/public/assets/kaan_sprite_1778962129326.png",
+        bg: "/assets/library_bg_1778962737349.png",
+        char: "/assets/kaan_sprite_1778962129326.png",
         speaker: "Kaan",
         text: "1. BULUŞMA: Bana bir şans verdiğin için teşekkürler Lara. Seninle sadece ders çalışmak bile güzel.",
         next: "date_2"
     },
     date_2: {
-        bg: "/public/assets/garden_bg_1778962904703.png",
-        char: "/public/assets/kaan_sprite_1778962129326.png",
+        bg: "/assets/garden_bg_1778962904703.png",
+        char: "/assets/kaan_sprite_1778962129326.png",
         speaker: "Kaan",
         text: "2. BULUŞMA: (Okul Bahçesi) Bugün hava harika. Seninle çimlerde oturup bulutları izlemek beni rahatlatıyor.",
         next: "date_3"
     },
     date_3: {
-        bg: "/public/assets/vn_classroom_bg_1778961836745.png",
-        char: "/public/assets/kaan_sprite_1778962129326.png",
+        bg: "/assets/vn_classroom_bg_1778961836745.png",
+        char: "/assets/kaan_sprite_1778962129326.png",
         speaker: "Kaan",
         text: "3. BULUŞMA: (Boş Sınıf) Herkes gittikten sonra burada baş başa kalıp müzik dinlemek... Sanırım favori aktivitem oldu.",
         next: "date_4"
     },
     date_4: {
-        bg: "/public/assets/library_bg_1778962737349.png",
-        char: "/public/assets/kaan_sprite_1778962129326.png",
+        bg: "/assets/library_bg_1778962737349.png",
+        char: "/assets/kaan_sprite_1778962129326.png",
         speaker: "Kaan",
         text: "4. BULUŞMA: (Hafta Sonu Kütüphanesi) Lara, sen okurken gözlerinin daldığı o anları izlemeye bayılıyorum.",
         next: "date_5"
     },
     date_5: {
-        bg: "/public/assets/garden_bg_1778962904703.png",
-        char: "/public/assets/eylul_sprite_1778962140020.png",
+        bg: "/assets/garden_bg_1778962904703.png",
+        char: "/assets/eylul_sprite_1778962140020.png",
         speaker: "Eylül",
         text: "5. BULUŞMA: (Piknik) Aaa! Kaan ve Lara? Siz ne zamandır böylesiniz? Lara, sen Kaan'ı sadece statüsü için kullanmıyor musun canım?",
         next: "date_5_choice"
     },
     date_5_choice: {
-        char: "/public/assets/vn_character_sprite_1778962030093.png",
+        char: "/assets/vn_character_sprite_1778962030093.png",
         speaker: "Lara",
         text: "(Eylül yine zehrini saçıyor. Ne yapmalıyım?)",
         choices: [
@@ -84,14 +84,14 @@ const story = {
     // SON 4: KARANLIK HIRS (EYLÜL GİBİ OLMAK)
     // ----------------------------------------------------
     ending_ambition: {
-        bg: "/public/assets/vn_classroom_bg_1778961836745.png",
-        char: "/public/assets/vn_character_sprite_1778962030093.png",
+        bg: "/assets/vn_classroom_bg_1778961836745.png",
+        char: "/assets/vn_character_sprite_1778962030093.png",
         speaker: "Lara",
         text: "'Aslında haklısın Eylül, güç her şeydir.' dedin. Kaan bunu duyduğunda yıkıldı.",
         next: "ending_ambition_2"
     },
     ending_ambition_2: {
-        bg: "/public/assets/vn_classroom_bg_1778961836745.png",
+        bg: "/assets/vn_classroom_bg_1778961836745.png",
         speaker: "Lara",
         text: "TRAJİK SON (Karanlık Hırs): Lara, masumiyetini kaybetti. Manipülatif biri oldu. Zengin ve başarılıydı ama etrafında ona gerçekten değer veren tek bir kişi bile kalmamıştı. Tamamen yalnızdı.",
         end: true
@@ -101,42 +101,42 @@ const story = {
     // DATE SERİSİ DEVAM (6 - 10)
     // ----------------------------------------------------
     date_6: {
-        bg: "/public/assets/library_bg_1778962737349.png",
-        char: "/public/assets/kaan_sprite_1778962129326.png",
+        bg: "/assets/library_bg_1778962737349.png",
+        char: "/assets/kaan_sprite_1778962129326.png",
         speaker: "Kaan",
         text: "6. BULUŞMA: Beni Eylül'e karşı savunduğun için teşekkürler Lara. Sana olan güvenim sonsuz.",
         next: "date_7"
     },
     date_7: {
-        bg: "/public/assets/vn_classroom_bg_1778961836745.png",
-        char: "/public/assets/kaan_sprite_1778962129326.png",
+        bg: "/assets/vn_classroom_bg_1778961836745.png",
+        char: "/assets/kaan_sprite_1778962129326.png",
         speaker: "Kaan",
         text: "7. BULUŞMA: (Yağmurlu Bir Gün) Dışarıda yağmur yağıyor ama senin yanındayken içim hep ısınıyor.",
         next: "date_8"
     },
     date_8: {
-        bg: "/public/assets/garden_bg_1778962904703.png",
-        char: "/public/assets/kaan_sprite_1778962129326.png",
+        bg: "/assets/garden_bg_1778962904703.png",
+        char: "/assets/kaan_sprite_1778962129326.png",
         speaker: "Kaan",
         text: "8. BULUŞMA: (Gün Batımı) Lara, bugün seninle ilk tanıştığımız günü düşündüm de... İyi ki o masaya oturmuşum.",
         next: "date_9"
     },
     date_9: {
-        bg: "/public/assets/library_bg_1778962737349.png",
-        char: "/public/assets/kaan_sprite_1778962129326.png",
+        bg: "/assets/library_bg_1778962737349.png",
+        char: "/assets/kaan_sprite_1778962129326.png",
         speaker: "Kaan",
         text: "9. BULUŞMA: Mezuniyet yaklaşıyor. Gelecek hakkında çok planım var. Hepsinin merkezinde sen varsın.",
         next: "date_10"
     },
     date_10: {
-        bg: "/public/assets/garden_bg_1778962904703.png",
-        char: "/public/assets/kaan_sprite_1778962129326.png",
+        bg: "/assets/garden_bg_1778962904703.png",
+        char: "/assets/kaan_sprite_1778962129326.png",
         speaker: "Kaan",
         text: "10. BULUŞMA: (Büyük İtiraf) Lara... Seni çok seviyorum. Ama sana söylemem gereken çok karanlık bir sırrım var.",
         next: "date_10_choice"
     },
     date_10_choice: {
-        char: "/public/assets/vn_character_sprite_1778962030093.png",
+        char: "/assets/vn_character_sprite_1778962030093.png",
         speaker: "Lara",
         text: "(Kaan'ın gözlerinde korkutucu bir gölge var. Bu sırra hazır mıyım?)",
         choices: [
@@ -149,14 +149,14 @@ const story = {
     // SON 1: MUTLU SON (AŞK VE GÜVEN)
     // ----------------------------------------------------
     ending_happy_love: {
-        bg: "/public/assets/garden_bg_1778962904703.png",
-        char: "/public/assets/kaan_sprite_1778962129326.png",
+        bg: "/assets/garden_bg_1778962904703.png",
+        char: "/assets/kaan_sprite_1778962129326.png",
         speaker: "Kaan",
         text: "Beni hatalarımla kabul ettiğin için teşekkürler Lara. Hayatım boyunca seni koruyacağım.",
         next: "ending_happy_love_2"
     },
     ending_happy_love_2: {
-        bg: "/public/assets/garden_bg_1778962904703.png",
+        bg: "/assets/garden_bg_1778962904703.png",
         speaker: "Lara",
         text: "MUTLU SON (Sonsuz Aşk): Lara ve Kaan tüm karanlık sırları aşarak evlendiler. Beraber bir teknoloji imparatorluğu kurup hayatlarının sonuna kadar mutlu yaşadılar.",
         end: true
@@ -166,14 +166,14 @@ const story = {
     // SON 3: TRAJİK İHANET (KALP KIRIKLIĞI)
     // ----------------------------------------------------
     ending_betrayal: {
-        bg: "/public/assets/vn_classroom_bg_1778961836745.png",
-        char: "/public/assets/kaan_sprite_1778962129326.png",
+        bg: "/assets/vn_classroom_bg_1778961836745.png",
+        char: "/assets/kaan_sprite_1778962129326.png",
         speaker: "Kaan",
         text: "Bana güvenmiyorsun demek... Tıpkı diğerleri gibi. Aslında sana oynadığım bir oyundu bu Lara. Eylül haklıydı.",
         next: "ending_betrayal_2"
     },
     ending_betrayal_2: {
-        bg: "/public/assets/vn_classroom_bg_1778961836745.png",
+        bg: "/assets/vn_classroom_bg_1778961836745.png",
         speaker: "Lara",
         text: "TRAJİK SON (İhanet): Kaan'ın acımasız ihaneti Lara'nın ruhunda kapanmaz yaralar açtı. Lara o günden sonra bir daha kimseye güvenemedi ve gölgelere geri döndü.",
         end: true
