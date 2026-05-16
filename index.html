@@ -3,42 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lace - Oyun Seçim Menüsü</title>
-    <meta name="description" content="Modern ve etkileşimli oyun seçim arayüzü. En sevdiğiniz oyunu seçin ve maceraya başlayın.">
-    <!-- Google Fonts -->
+    <title>Lace: Gölgelerden Zirveye</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="blob"></div>
-    
-    <div class="container">
-        <header>
-            <h1 id="main-title">Lace Universe</h1>
-            <p class="subtitle">Maceraya başlamak için bir mod seçin</p>
-        </header>
-
-        <main class="game-options">
-            <div class="option-card" id="btn-speed-run" onclick="selectGame('Hızlı Koşu')">
-                <div class="icon">⚡</div>
-                <h2>Hızlı Koşu</h2>
-                <p>Zamana karşı yarışın ve engelleri en kısa sürede aşın. Reflekslerinizi test edin!</p>
+    <div id="game-container">
+        <!-- Arka Plan -->
+        <div id="bg-layer"></div>
+        
+        <!-- Karakterler -->
+        <div id="character-layer">
+            <img id="char-sprite" src="" alt="Karakter" style="display: none;">
+        </div>
+        
+        <!-- UI Katmanı -->
+        <div id="ui-layer">
+            <div id="dialogue-box">
+                <div id="speaker-name">İsim</div>
+                <div id="dialogue-text">Metin buraya gelecek...</div>
+                <div id="next-indicator">▼</div>
             </div>
-
-            <div class="option-card" id="btn-strategy" onclick="selectGame('Strateji Arenası')">
-                <div class="icon">🧩</div>
-                <h2>Strateji Arenası</h2>
-                <p>Zekanızı kullanın, hamlelerinizi planlayın ve rakiplerinizi zekanızla alt edin.</p>
+            
+            <div id="choices-container" style="display: none;">
+                <!-- Seçenekler buraya eklenecek -->
             </div>
-
-            <div class="option-card" id="btn-survival" onclick="selectGame('Hayatta Kalma')">
-                <div class="icon">🛡️</div>
-                <h2>Hayatta Kalma</h2>
-                <p>Giderek zorlaşan dalgalara karşı ne kadar süre dayanabileceksiniz?</p>
-            </div>
-        </main>
+        </div>
+        
+        <!-- Başlangıç Ekranı -->
+        <div id="start-screen">
+            <h1>Lace: Gölgelerden Zirveye</h1>
+            <p>Seçimleriniz hikayenin sonunu belirleyecek.</p>
+            <button id="start-btn">Oyuna Başla</button>
+        </div>
     </div>
 
     <script src="script.js"></script>
