@@ -515,7 +515,170 @@ const story = {
 
     ch20_1: {
         speaker: "Sistem",
-        text: "(Bölüm 20) FİNAL. Lara okulun ortasında duruyor. Arkasında babası, yanında Kaan... Gölgeler artık dağılıyor.",
+        text: "(Bölüm 20) FİNAL yaklaşıyor ama hikaye henüz bitmedi. Lara okulun ortasında duruyor. Gölgeler dağılıyor ama Eylül'ün son bir kozu daha var.",
+        next: "ch21_1"
+    },
+
+    // ==========================================
+    // BÖLÜM 21: OKULUN TEPKİSİ
+    // ==========================================
+    ch21_1: {
+        bg: "/assets/vn_classroom_bg_1778961836745.png",
+        speaker: "Sistem",
+        text: "(Bölüm 21) Ses kaydı okulda bomba etkisi yarattı. Bazıları sana acıyarak bakıyor, bazıları ise hala fısıldaşıyor.",
+        next: "ch21_2"
+    },
+    ch21_2: {
+        speaker: "Lara",
+        text: "Başımı eğmeyeceğim. Annemin günahlarını ben çekmeyeceğim. Artık herkes biliyor, saklayacak bir şeyim kalmadı.",
+        choices: [
+            { text: "Sınıfa gir ve herkese gülümse", target: "ch22_1", anxietyChange: -10 },
+            { text: "Hızla sırana otur", target: "ch22_1", anxietyChange: +5 }
+        ]
+    },
+
+    // ==========================================
+    // BÖLÜM 22: KAAN'IN ARAŞTIRMASI
+    // ==========================================
+    ch22_1: {
+        bg: "/assets/library_bg_1778962737349.png",
+        char: "/assets/kaan_sprite_1778962129326.png",
+        speaker: "Kaan",
+        text: "(Bölüm 22) Lara, Eylül'ün bu kaydı tek başına ele geçirdiğine inanmıyorum. Birinden yardım almış olmalı.",
+        next: "ch22_2"
+    },
+    ch22_2: {
+        speaker: "Kaan",
+        text: "Kütüphane kayıtlarını ve güvenlik kameralarını inceliyorum. Seni bu kadar derinden yaralayan herkes bedelini ödeyecek.",
+        choices: [
+            { text: "Bırak kalsın de", target: "ch23_1", anxietyChange: +10 },
+            { text: "Teşekkür ederim de", target: "ch23_1", anxietyChange: -5 }
+        ]
+    },
+
+    // ==========================================
+    // BÖLÜM 23: ARES'İN PİŞMANLIĞI
+    // ==========================================
+    ch23_1: {
+        bg: "/assets/garden_bg_1778962904703.png",
+        char: "/assets/ARES.png",
+        speaker: "Ares",
+        text: "(Bölüm 23) Lara... Özür dilerim. Eylül'ün ne kadar ileri gidebileceğini biliyordum ama sessiz kaldım. Kendimi affedemiyorum.",
+        next: "ch23_2"
+    },
+    ch23_2: {
+        speaker: "Ares",
+        text: "Eylül'ün bilgisayar şifresini biliyorum. Eğer istersen, tüm o sahte kanıtları ve planlarını silebiliriz.",
+        choices: [
+            { text: "Yardımını kabul et", target: "ch24_1", anxietyChange: -10 },
+            { text: "Ona güvenme", target: "ch24_1", anxietyChange: +15 }
+        ]
+    },
+
+    // ==========================================
+    // BÖLÜM 24: GÜÇLENME
+    // ==========================================
+    ch24_1: {
+        bg: "/assets/vn_classroom_bg_1778961836745.png",
+        speaker: "Sistem",
+        text: "(Bölüm 24) Okulda bir değişim var. Artık senden kaçmıyorlar. İnsanlar senin cesaretine hayran kalmaya başladı.",
+        next: "ch24_2"
+    },
+    ch24_2: {
+        char: "/assets/vn_character_sprite_1778962030093.png",
+        speaker: "Lara",
+        text: "İlk kez kendimi bir yere ait hissediyorum. Gölgelerden çıkmak ne kadar da ferahlatıcıymış...",
+        next: "ch25_1"
+    },
+
+    // ==========================================
+    // BÖLÜM 25: OKUL BALOSU (SON KOZLAR)
+    // ==========================================
+    ch25_1: {
+        bg: "/assets/library_bg_1778962737349.png",
+        speaker: "Sistem",
+        text: "(Bölüm 25) Yıl sonu balosu yaklaşıyor. Eylül bu gece için büyük bir 'sürpriz' hazırladığını duyurdu.",
+        next: "ch25_2"
+    },
+    ch25_2: {
+        char: "/assets/eylul_sprite_1778962140020.png",
+        speaker: "Eylül",
+        text: "Bakalım bu gece sonunda hala o kadar dik durabilecek misin Lara. Herkes senin gerçek yüzünü görecek.",
+        next: "ch26_1"
+    },
+
+    // ==========================================
+    // BÖLÜM 26: İTTİFAK
+    // ==========================================
+    ch26_1: {
+        bg: "/assets/garden_bg_1778962904703.png",
+        speaker: "Sistem",
+        text: "(Bölüm 26) Kaan ve Ares ilk kez yan yana duruyor. Tek bir amaçları var: Lara'yı korumak.",
+        next: "ch26_2"
+    },
+    ch26_2: {
+        char: "/assets/kaan_sprite_1778962129326.png",
+        speaker: "Kaan",
+        text: "Eylül'ün ne planladığını biliyoruz Ares. Bu sefer izin vermeyeceğiz.",
+        next: "ch27_1"
+    },
+
+    // ==========================================
+    // BÖLÜM 27: EYLÜL'ÜN DÜŞÜŞÜ
+    // ==========================================
+    ch27_1: {
+        bg: "/assets/library_bg_1778962737349.png",
+        speaker: "Sistem",
+        text: "(Bölüm 27) Balonun tam ortasında Eylül sahneye çıkar. Ama tam konuşacakken ekranlarda kendi sinsi planları belirir.",
+        next: "ch27_2"
+    },
+    ch27_2: {
+        speaker: "Sistem",
+        text: "Eylül'ün Lara'ya kurduğu tuzaklar, Ares'i nasıl manipüle ettiği her şey ifşa olur. Okulda büyük bir sessizlik hakimdir.",
+        next: "ch28_1"
+    },
+
+    // ==========================================
+    // BÖLÜM 28: İYİLEŞME BAHÇESİ
+    // ==========================================
+    ch28_1: {
+        bg: "/assets/garden_bg_1778962904703.png",
+        speaker: "Sistem",
+        text: "(Bölüm 28) Balonun gürültüsünden kaçıp bahçeye çıkarsın. Kaan oradadır.",
+        next: "ch28_2"
+    },
+    ch28_2: {
+        char: "/assets/kaan_sprite_1778962129326.png",
+        speaker: "Kaan",
+        text: "Her şey bitti Lara. Artık özgürsün. Kimse seni bir daha karanlık bir odaya kilitleyemez.",
+        choices: [
+            { text: "Ona teşekkür et ve sarıl", target: "ch29_1", anxietyChange: -20 },
+            { text: "Elini tut", target: "ch29_1", anxietyChange: -10 }
+        ]
+    },
+
+    // ==========================================
+    // BÖLÜM 29: BABANIN ONAYI
+    // ==========================================
+    ch29_1: {
+        bg: "/assets/library_bg_1778962737349.png",
+        speaker: "Sistem",
+        text: "(Bölüm 29) Baban Vedat okula gelir. Kaan ile tanışırlar.",
+        next: "ch29_2"
+    },
+    ch29_2: {
+        speaker: "Vedat",
+        text: "Kızımın yanında olduğun için teşekkürler evlat. Lara, seninle gurur duyuyorum.",
+        next: "ch30_1"
+    },
+
+    // ==========================================
+    // BÖLÜM 30: YENİ UFUKLAR (FİNAL)
+    // ==========================================
+    ch30_1: {
+        bg: "/assets/garden_bg_1778962904703.png",
+        speaker: "Sistem",
+        text: "(Bölüm 30) Lara okulun bahçesinde ufka bakıyor. Gölgelerden zirveye uzanan bu yolculuk burada bitiyor... Ya da yeni başlıyor.",
         next: "decide_end"
     },
 
