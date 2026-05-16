@@ -189,3 +189,46 @@ body {
 #start-btn:hover {
     transform: scale(1.1);
 }
+
+#anxiety-hud {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: rgba(15, 23, 42, 0.8);
+    backdrop-filter: blur(5px);
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: 1px solid rgba(255,255,255,0.1);
+    z-index: 100;
+    pointer-events: none;
+}
+
+.anxiety-label {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.anxiety-bar-bg {
+    width: 200px;
+    height: 10px;
+    background: rgba(255,255,255,0.2);
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+#anxiety-bar-fill {
+    height: 100%;
+    width: 20%;
+    background: var(--primary-gradient);
+    transition: width 0.3s ease, background 0.3s ease;
+}
+
+.panic-mode {
+    animation: panic-pulse 0.5s infinite alternate;
+}
+
+@keyframes panic-pulse {
+    0% { box-shadow: 0 0 10px red; border-color: red; }
+    100% { box-shadow: 0 0 30px darkred; border-color: darkred; }
+}
