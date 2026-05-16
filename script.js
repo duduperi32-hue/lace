@@ -70,6 +70,13 @@ const story = {
         char: "/assets/vn_character_sprite_1778962030093.png",
         speaker: "Lara",
         text: "(Konuşamıyorum... Boğazım düğümlendi. Sadece gözlerine bakıyorum.)",
+        next: "ep2_flashback"
+    },
+    ep2_flashback: {
+        bg: "",
+        char: "",
+        speaker: "Annesi (Flashback)",
+        text: "'Bir işi de beceremiyor musun? Her yeri mahvettin yine sakar!' (Zihnimde annemin o keskin sesi yankılandı...)",
         next: "ep3_1"
     },
 
@@ -342,16 +349,31 @@ const story = {
         char: "",
         speaker: "Sistem",
         text: "!!! PANİK ATAK !!!\nAnksiyete seviyen 70'i aştı! Ares'in kavgası, Eylül'ün bakışları, geçmişte yaşadığın tüm zorbalıklar... Kalbin göğsünü delip çıkacakmış gibi atıyor.",
+        next: "panic_attack_flashback"
+    },
+    panic_attack_flashback: {
+        bg: "",
+        char: "",
+        speaker: "Annesi (Flashback)",
+        text: "'Sen zayıfsın Lara! Hep böyle zavallı kalacaksın!'",
         next: "panic_attack_2"
     },
     panic_attack_2: {
+        bg: "",
         speaker: "Lara",
-        text: "Nefes... alamıyorum... Bana bakıyorlar... Lütfen... durun...",
+        text: "Nefes... alamıyorum... Bana bakıyorlar... Annem haklıydı... Lütfen... durun...",
+        next: "panic_attack_3"
+    },
+    panic_attack_3: {
+        bg: "/assets/library_bg_1778962737349.png",
+        char: "",
+        speaker: "Vedat (Babası)",
+        text: "Lara! Kızım, buradayım! Derin nefes al... Sadece benim sesime odaklan. Geçecek, baban yanında...",
         next: "panic_attack_end"
     },
     panic_attack_end: {
         speaker: "Sistem",
-        text: "KÖTÜ SON: Travmaların seni yuttu. Kaan sana yardım etmeye çalıştı ama sen herkesi itip o okuldan sonsuza dek kaçtın. Anksiyetene yenik düştün.",
+        text: "DRAMATİK SON (Babanın Şefkati): Annenin karanlık hatıraları seni yuttu. Ancak tam o çaresiz anda baban Vedat seni buldu. Kaan'ı o gün kaybetsen de, babanın sana sarılmasıyla hayata yeniden tutunmak için büyük bir adım attın.",
         choices: [{ text: "Baştan Başla", target: "start", anxietyChange: -1000 }]
     }
 };
