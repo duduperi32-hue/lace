@@ -1,114 +1,110 @@
 const story = {
     start: {
-        bg: "/assets/library_bg_1778962737349.png",
-        char: "/assets/kaan_sprite_1778962129326.png",
+        bg: "/public/assets/library_bg_1778962737349.png",
+        char: "/public/assets/kaan_sprite_1778962129326.png",
         speaker: "Kaan",
-        text: "Matematik evrenin dilidir derler ama senin gözlerin hiçbir dilde konuşmuyor.",
+        text: "Matematik evrenin dilidir derler... Ama senin o yeşil gözlerin hiçbir dilde konuşmuyor, Lace.",
         next: "node1"
     },
     node1: {
-        char: "/assets/vn_character_sprite_1778962030093.png",
+        char: "/public/assets/vn_character_sprite_1778962030093.png",
         speaker: "Lace",
-        text: "(Bu çocuk kim? Neden okulun en popüler çocuğu benim masama geldi?)",
+        text: "(Okulun en popüler çocuğu Kaan, kütüphanenin bu ıssız köşesinde beni nasıl buldu?)",
         choices: [
-            { text: "Ona güvenmeye karar ver (Gülümse)", target: "garden_scene" },
-            { text: "Mesafeli davran (Kitaba dön)", target: "cold_path_1" }
+            { text: "Ona güven ve sıcak davran", target: "trust_route_garden" },
+            { text: "Mesafeni koru ve sorgula", target: "distrust_route_classroom" }
         ]
     },
-    // --- YOL 1: GÖLGELERDEN ZİRVEYE (İYİ KAAN, KÖTÜ EYLÜL) ---
-    garden_scene: {
-        bg: "/assets/garden_bg_1778962904703.png",
-        char: "/assets/kaan_sprite_1778962129326.png",
+
+    // ----------------------------------------------------
+    // YOL 1: GÜVEN YOLU (GÖLGELERDEN ZİRVEYE)
+    // ----------------------------------------------------
+    trust_route_garden: {
+        bg: "/public/assets/garden_bg_1778962904703.png",
+        char: "/public/assets/kaan_sprite_1778962129326.png",
         speaker: "Kaan",
-        text: "Lace, neden her zaman bir adım geridesin? Benden hala korkuyor musun?",
-        next: "garden_scene_2"
+        text: "Seni hep uzaktan izliyordum Lace. O soğuk maskenin altında sıcacık bir kalbin olduğunu biliyordum.",
+        next: "trust_route_eylul_enters"
     },
-    garden_scene_2: {
-        char: "/assets/vn_character_sprite_1778962030093.png",
+    trust_route_eylul_enters: {
+        bg: "/public/assets/garden_bg_1778962904703.png",
+        char: "/public/assets/eylul_sprite_1778962140020.png",
+        speaker: "Eylül",
+        text: "Aaa Kaan! Demek buradaydın. Ve yanında... Lace? İnanamıyorum. Lace senin sadece zenginliğinle ilgileniyor Kaan, herkes bunu konuşuyor!",
+        next: "trust_route_choice"
+    },
+    trust_route_choice: {
+        char: "/public/assets/vn_character_sprite_1778962030093.png",
         speaker: "Lace",
-        text: "Ben kimseden korkmam Kaan. Sadece... güvenmek benim için bir lüks.",
-        next: "garden_scene_3"
-    },
-    garden_scene_3: {
-        speaker: "Kaan",
-        text: "Bana güvenebilirsin. Bak, buradayım. Gitmiyorum.",
-        next: "enter_eylul"
-    },
-    enter_eylul: {
-        bg: "/assets/vn_classroom_bg_1778961836745.png",
-        char: "/assets/eylul_sprite_1778962140020.png",
-        speaker: "Eylül",
-        text: "Aaa, Lace! Kaan'la ne kadar yakınsınız böyle. Ben de aranıza katılabilir miyim?",
-        next: "eylul_manipulation"
-    },
-    eylul_manipulation: {
-        speaker: "Eylül",
-        text: "Biliyor musun Lace, insanlar senin soğuk olduğunu düşünüp korkuyorlar.",
+        text: "(Eylül yıllardır bana eziyet ediyor. Şimdi de Kaan'ı benden koparmak istiyor.)",
         choices: [
-            { text: "Sessiz kal ve içine kapan", target: "eylul_wins" },
-            { text: "Kendini savun (Reis Modu)", target: "lace_defends" }
+            { text: "Sessizce geri çekil ve kaç", target: "bad_ending_eylul_wins" },
+            { text: "Eylül'ün yalanlarını yüzüne vur", target: "true_ending_love_wins" }
         ]
     },
-    eylul_wins: {
-        char: "/assets/kaan_sprite_1778962129326.png",
-        speaker: "Kaan",
-        text: "Eylül haklı galiba Lace... Belki de biraz değişmelisin.",
-        next: "bad_ending_1"
-    },
-    bad_ending_1: {
-        speaker: "",
-        text: "Kötü Son: Kaan'ı Eylül'e kaptırdın ve tekrar gölgelere çekildin.",
+    bad_ending_eylul_wins: {
+        bg: "/public/assets/library_bg_1778962737349.png",
+        speaker: "Lace",
+        text: "KÖTÜ SON: Sessizliğin, Eylül'ün yalanlarını doğru kıldı. Kaan senden uzaklaştı ve tekrar o yalnız kütüphane köşesine mahkum oldun.",
         end: true
     },
-    lace_defends: {
-        char: "/assets/kaan_sprite_1778962129326.png",
+    true_ending_love_wins: {
+        bg: "/public/assets/garden_bg_1778962904703.png",
+        char: "/public/assets/kaan_sprite_1778962129326.png",
         speaker: "Kaan",
-        text: "Ben öyle düşünmüyorum Eylül. Lace soğuk değil, seçici. Onu geçmişiyle vurma.",
-        next: "happy_ending"
+        text: "Eylül, yeter! Lace'in gözlerindeki dürüstlüğü senin yalanlarına değişmem. Bizim aramızdan çekil.",
+        next: "true_ending_epilogue"
     },
-    happy_ending: {
-        bg: "/assets/garden_bg_1778962904703.png",
+    true_ending_epilogue: {
+        bg: "/public/assets/garden_bg_1778962904703.png",
         speaker: "Lace",
-        text: "Yıllar sonra Lace ve Kaan kendi şirketlerini kurdular. Gölgelerden zirveye uzanan bir aşk...",
+        text: "MUTLU SON: Kaan'la el ele verdiniz. Yıllar sonra kendi teknoloji şirketinizi kurduğunuzda, Eylül çoktan unutulmuştu. Artık gökyüzü sizin...",
         end: true
     },
 
-    // --- YOL 2 & 3: KARANLIK VE UYANIŞ (KÖTÜ KAAN) ---
-    cold_path_1: {
-        bg: "/assets/library_bg_1778962737349.png",
-        char: "/assets/kaan_sprite_1778962129326.png",
+    // ----------------------------------------------------
+    // YOL 2: MESAFE YOLU (KARANLIK VE UYANIŞ)
+    // ----------------------------------------------------
+    distrust_route_classroom: {
+        bg: "/public/assets/vn_classroom_bg_1778961836745.png",
+        char: "/public/assets/kaan_sprite_1778962129326.png",
         speaker: "Kaan",
-        text: "Zor kızı oynamayı seviyorsun demek. Bu akşam bana gel, yeni bir proje üzerine çalışalım.",
-        next: "kaan_house"
+        text: "Zor kızı oynaman hoşuma gidiyor. Okuldan sonra boş sınıfa gel, seninle özel bir 'proje' çalışalım.",
+        next: "classroom_tension"
     },
-    kaan_house: {
-        bg: "/assets/vn_classroom_bg_1778961836745.png", // using classroom as dark room placeholder
-        char: "/assets/kaan_sprite_1778962129326.png",
+    classroom_tension: {
+        bg: "/public/assets/vn_classroom_bg_1778961836745.png",
+        char: "/public/assets/kaan_sprite_1778962129326.png",
         speaker: "Kaan",
-        text: "Lace, bir aydır seni bekliyorum. Bu kadar naz yeter. Sevgiliyiz biz, unuttun mu?",
-        next: "kaan_house_2"
+        text: "Neden titriyorsun Lace? Senin gibi zeki bir kız, bu kadar naz yapmamalı. Benim kurallarıma uyacaksın.",
+        next: "distrust_route_choice"
     },
-    kaan_house_2: {
-        char: "/assets/vn_character_sprite_1778962030093.png",
+    distrust_route_choice: {
+        char: "/public/assets/vn_character_sprite_1778962030093.png",
         speaker: "Lace",
-        text: "Hayır, gerçekten yapamam... Kaan, bırak beni!",
+        text: "(Kaan'ın gözlerindeki karanlığı görebiliyorum. Bu o güler yüzlü çocuk değil, bir canavar!)",
         choices: [
-            { text: "Pes et ve travmaya yenik düş", target: "suicide_ending" },
-            { text: "Savaş ve adaleti ara", target: "empowerment_ending" }
+            { text: "Korkuya yenik düş ve itaat et", target: "bad_ending_trauma" },
+            { text: "Ona meydan oku ve kapıya koş", target: "good_ending_empowerment" }
         ]
     },
-    suicide_ending: {
-        bg: "",
-        char: "",
+    bad_ending_trauma: {
+        bg: "/public/assets/vn_classroom_bg_1778961836745.png",
         speaker: "Lace",
-        text: "'Güven + İnsan = 0'. Suyun buharı banyoyu kaplarken, Lace gözlerini kapattı. En Soğuk Fonksiyon.",
+        text: "KÖTÜ SON (Gecenin En Soğuk Fonksiyonu): Kaan'ın karanlığı seni yuttu. Kendi zihninin zindanında, çözemediğin o denklemlerle baş başa kaldın.",
         end: true
     },
-    empowerment_ending: {
-        bg: "/assets/garden_bg_1778962904703.png",
-        char: "",
+    good_ending_empowerment: {
+        bg: "/public/assets/library_bg_1778962737349.png",
+        char: "/public/assets/vn_character_sprite_1778962030093.png",
         speaker: "Lace",
-        text: "Hayır. Annemin sessizliğinin bedelini ben ödemeyeceğim. Adalet yerini buldu. Gökyüzü artık mavi.",
+        text: "'Ben kimsenin kurbanı değilim!' dedin ve oradan uzaklaştın. Hayatından zehirli insanları çıkardın.",
+        next: "empowerment_epilogue"
+    },
+    empowerment_epilogue: {
+        bg: "/public/assets/library_bg_1778962737349.png",
+        speaker: "Lace",
+        text: "GÜÇLÜ SON (Gökyüzünün Rengi): Tek başına ayakların üzerinde durdun. Adaleti sağladın ve dünyanın en başarılı mühendislerinden biri oldun. Kendi kurtarıcın sendin.",
         end: true
     }
 };
