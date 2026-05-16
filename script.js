@@ -224,32 +224,66 @@ const story = {
     },
 
     // ==========================================
-    // BÖLÜM 10: Büyük Kavga!
+    // BÖLÜM 10: Büyük Kavga (SİNEMATİK)
     // ==========================================
     ep10_1: {
         bg: "/assets/vn_classroom_bg_1778961836745.png",
         speaker: "Sistem",
-        text: "(Bölüm 10) Ares okulun arkasında Kaan'ın önünü keser.",
+        text: "(Bölüm 10) Okulun arkasındaki boş arazide hava aniden ağırlaştı. Ares, Kaan'ın önünü kestiğinde gözleri nefretle parlıyordu.",
         next: "ep10_2"
     },
     ep10_2: {
         char: "/assets/ARES.png",
         speaker: "Ares",
-        text: "Eylül seni sevdiğini söylüyor! Ne var sende ha?! Ne buluyor sende!",
+        text: "Eylül senin için ağlıyor! Onu mahvettin! Şimdi bunun bedelini ödeyeceksin!",
         next: "ep10_3"
     },
     ep10_3: {
         char: "/assets/kaan_sprite_1778962129326.png",
         speaker: "Kaan",
-        text: "Ares, saçmalamayı kes. Benim Eylül'le bir ilgim yok, biliyorsun. Geri çekil.",
+        text: "Ares, yapma. Aramızdaki mesele bu değil. Eylül kendi seçimlerini yaşıyor...",
         next: "ep10_4"
     },
     ep10_4: {
+        bg: "",
+        char: "",
         speaker: "Sistem",
-        text: "Ares dinlemez ve gözü dönmüş bir şekilde Kaan'ın üzerine atlar. Kaan savunmasız yakalanır ve fena halde dayak yer. Ares, hıncını alıp oradan uzaklaşır.",
+        text: "*Ares ilk yumruğu savurur. Kaan sarsılır. Lara'nın zihninde bir şimşek çakar.*",
+        next: "ep10_flashback_1"
+    },
+    ep10_flashback_1: {
+        bg: "",
+        char: "",
+        speaker: "Annesi (Flashback)",
+        text: "'Kavga mı? Yine mi sorun çıkardın?! Sen sadece bela getiriyorsun Lara!'",
+        next: "ep10_5"
+    },
+    ep10_5: {
+        bg: "/assets/vn_classroom_bg_1778961836745.png",
+        speaker: "Sistem",
+        text: "Ares, Kaan'ı yere düşürür. Yumruklar ardı ardına inerken Lara sadece izlemek zorunda kalır.",
+        next: "ep10_6"
+    },
+    ep10_6: {
+        bg: "",
+        char: "",
+        speaker: "Lara",
+        text: "(Hayır... Durun! Gözlerimin önünde her şey kararıyor. Kan... Yine kan görüyorum...)",
+        next: "ep10_7"
+    },
+    ep10_7: {
+        bg: "/assets/vn_classroom_bg_1778961836745.png",
+        char: "/assets/ARES.png",
+        speaker: "Ares",
+        text: "Bu kadar mı Kaan? Hani o büyük okul kahramanıydın? Şimdi yerde sürünüyorsun!",
+        next: "ep10_8"
+    },
+    ep10_8: {
+        speaker: "Sistem",
+        text: "Ares, hıncını alıp Kaan'ı kanlar içinde yerde bırakarak oradan uzaklaşır. Lara'nın bacakları titremektedir.",
         choices: [
             { text: "Çığlık atarak Kaan'ın yanına koş", target: "ep11_1", anxietyChange: +30 },
-            { text: "Derin nefes al, sakinleşip yanına git", target: "ep11_1", anxietyChange: -5 }
+            { text: "Hıçkırıklara boğul ve yere çök", target: "ep11_1", anxietyChange: +10 }
         ]
     },
 
