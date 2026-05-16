@@ -7,7 +7,6 @@ const story = {
         next: "node1"
     },
     node1: {
-        char: "/assets/vn_character_sprite_1778962030093.png",
         speaker: "Lace",
         text: "(Bu çocuk kim? Neden okulun en popüler çocuğu benim masama geldi?)",
         choices: [
@@ -24,7 +23,6 @@ const story = {
         next: "garden_scene_2"
     },
     garden_scene_2: {
-        char: "/assets/vn_character_sprite_1778962030093.png",
         speaker: "Lace",
         text: "Ben kimseden korkmam Kaan. Sadece... güvenmek benim için bir lüks.",
         next: "garden_scene_3"
@@ -89,7 +87,6 @@ const story = {
         next: "kaan_house_2"
     },
     kaan_house_2: {
-        char: "/assets/vn_character_sprite_1778962030093.png",
         speaker: "Lace",
         text: "Hayır, gerçekten yapamam... Kaan, bırak beni!",
         choices: [
