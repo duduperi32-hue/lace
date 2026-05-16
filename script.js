@@ -567,15 +567,7 @@ document.addEventListener("DOMContentLoaded", () => {
             node.choices.forEach(choice => {
                 const btn = document.createElement('button');
                 btn.className = "choice-btn";
-                // Seçeneğin yanına anksiyete etkisini göster (opsiyonel)
-                let effectText = "";
-                if(choice.anxietyChange > 0 && choice.anxietyChange !== -1000) {
-                    effectText = ` (Anksiyete +${choice.anxietyChange})`;
-                } else if(choice.anxietyChange < 0 && choice.anxietyChange !== -1000) {
-                    effectText = ` (Sakinleştirir ${choice.anxietyChange})`;
-                }
-
-                btn.textContent = choice.text + effectText;
+                btn.textContent = choice.text;
                 btn.onclick = (e) => {
                     e.stopPropagation();
                     if(choice.anxietyChange !== undefined) {
