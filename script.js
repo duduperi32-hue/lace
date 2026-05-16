@@ -330,7 +330,42 @@ const story = {
         text: "Üzgünüm Lara, ama Kaan'ın senin gibi 'hasarlı' biriyle vakit kaybetmesine izin veremezdim. İnsanlar senin ne kadar dengesiz olduğunu bilmeliydi.",
         choices: [
             { text: "Eylül'ün üzerine yürü", target: "ep15_1", anxietyChange: +30 },
-            { text: "Kaan'ı ara, ona sığın", target: "ep15_1", anxietyChange: +20 }
+            { text: "Okuldan kaç, eve sığın", target: "ep14_father_start", anxietyChange: +10 }
+        ]
+    },
+
+    // ==========================================
+    // BÖLÜM 14.5: Babanın Şefkati
+    // ==========================================
+    ep14_father_start: {
+        bg: "/assets/library_bg_1778962737349.png", // Ev içi niyetine
+        char: "",
+        speaker: "Sistem",
+        text: "Okuldan koşarak çıktın. Gözyaşların yanaklarını yakarken eve vardın. Kapıyı baban Vedat açtı.",
+        next: "ep14_father_1"
+    },
+    ep14_father_1: {
+        speaker: "Vedat",
+        text: "Lara? Kızım, bu halin ne? Yine mi o eski kabuslar? Gel buraya...",
+        next: "ep14_father_2"
+    },
+    ep14_father_2: {
+        char: "/assets/vn_character_sprite_1778962030093.png",
+        speaker: "Lara",
+        text: "Baba... Eylül her şeyi anlattı. Herkes biliyor artık. Annemin bana yaptıklarını, karanlık odayı... Herkes benden nefret edecek.",
+        next: "ep14_father_3"
+    },
+    ep14_father_3: {
+        speaker: "Vedat",
+        text: "Bak bana Lara. Annenin hastalığı onun suçuydu, senin değil. Sen o karanlık odadan çıktın kızım. Sen o odadan daha büyüksün. Kimsenin seni etiketlemesine izin verme.",
+        next: "ep14_father_4"
+    },
+    ep14_father_4: {
+        speaker: "Vedat",
+        text: "Seni her halinle seven bir baban var. Ve eminim o çocuk... Kaan... O da senin gerçek kalbini görüyor. Şimdi sil gözyaşlarını, yarın o okula başın dik döneceksin.",
+        choices: [
+            { text: "Babana sarıl ve huzur bul", target: "ep15_1", anxietyChange: -30 },
+            { text: "Sessizce odana çekil", target: "ep15_1", anxietyChange: -5 }
         ]
     },
 
