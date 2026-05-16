@@ -757,6 +757,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const anxietyBarFill = document.getElementById('anxiety-bar-fill');
     const anxietyHud = document.getElementById('anxiety-hud');
     const muteBtn = document.getElementById('mute-btn');
+    const volumeSlider = document.getElementById('volume-slider');
     const bgMusic = document.getElementById('bg-music');
     const heartbeatSnd = document.getElementById('heartbeat-snd');
 
@@ -770,6 +771,12 @@ document.addEventListener("DOMContentLoaded", () => {
         bgMusic.muted = isMuted;
         heartbeatSnd.muted = isMuted;
         muteBtn.innerHTML = isMuted ? '<i class="fas fa-volume-mute"></i>' : '<i class="fas fa-volume-up"></i>';
+    });
+
+    volumeSlider.addEventListener('input', (e) => {
+        const val = e.target.value;
+        bgMusic.volume = val;
+        heartbeatSnd.volume = val;
     });
 
     function updateAnxiety(change) {
@@ -808,7 +815,7 @@ document.addEventListener("DOMContentLoaded", () => {
         
         // Müzik çalma denemesi
         if (!isMuted) {
-            bgMusic.volume = 0.5; // %50 ses seviyesi
+            bgMusic.volume = volumeSlider.value;
             bgMusic.play()
                 .then(() => console.log("BGM çalmaya başladı"))
                 .catch(e => {
