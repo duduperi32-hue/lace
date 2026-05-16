@@ -1,13 +1,13 @@
 const story = {
     start: {
-        bg: "assets/library_bg_1778962737349.png",
-        char: "assets/kaan_sprite_1778962129326.png",
+        bg: "/assets/library_bg_1778962737349.png",
+        char: "/assets/kaan_sprite_1778962129326.png",
         speaker: "Kaan",
         text: "Matematik evrenin dilidir derler ama senin gözlerin hiçbir dilde konuşmuyor.",
         next: "node1"
     },
     node1: {
-        char: "assets/vn_character_sprite_1778962030093.png",
+        char: "/assets/vn_character_sprite_1778962030093.png",
         speaker: "Lace",
         text: "(Bu çocuk kim? Neden okulun en popüler çocuğu benim masama geldi?)",
         choices: [
@@ -17,14 +17,14 @@ const story = {
     },
     // --- YOL 1: GÖLGELERDEN ZİRVEYE (İYİ KAAN, KÖTÜ EYLÜL) ---
     garden_scene: {
-        bg: "assets/garden_bg_1778962904703.png",
-        char: "assets/kaan_sprite_1778962129326.png",
+        bg: "/assets/garden_bg_1778962904703.png",
+        char: "/assets/kaan_sprite_1778962129326.png",
         speaker: "Kaan",
         text: "Lace, neden her zaman bir adım geridesin? Benden hala korkuyor musun?",
         next: "garden_scene_2"
     },
     garden_scene_2: {
-        char: "assets/vn_character_sprite_1778962030093.png",
+        char: "/assets/vn_character_sprite_1778962030093.png",
         speaker: "Lace",
         text: "Ben kimseden korkmam Kaan. Sadece... güvenmek benim için bir lüks.",
         next: "garden_scene_3"
@@ -35,8 +35,8 @@ const story = {
         next: "enter_eylul"
     },
     enter_eylul: {
-        bg: "assets/vn_classroom_bg_1778961836745.png",
-        char: "assets/eylul_sprite_1778962140020.png",
+        bg: "/assets/vn_classroom_bg_1778961836745.png",
+        char: "/assets/eylul_sprite_1778962140020.png",
         speaker: "Eylül",
         text: "Aaa, Lace! Kaan'la ne kadar yakınsınız böyle. Ben de aranıza katılabilir miyim?",
         next: "eylul_manipulation"
@@ -50,7 +50,7 @@ const story = {
         ]
     },
     eylul_wins: {
-        char: "assets/kaan_sprite_1778962129326.png",
+        char: "/assets/kaan_sprite_1778962129326.png",
         speaker: "Kaan",
         text: "Eylül haklı galiba Lace... Belki de biraz değişmelisin.",
         next: "bad_ending_1"
@@ -61,13 +61,13 @@ const story = {
         end: true
     },
     lace_defends: {
-        char: "assets/kaan_sprite_1778962129326.png",
+        char: "/assets/kaan_sprite_1778962129326.png",
         speaker: "Kaan",
         text: "Ben öyle düşünmüyorum Eylül. Lace soğuk değil, seçici. Onu geçmişiyle vurma.",
         next: "happy_ending"
     },
     happy_ending: {
-        bg: "assets/garden_bg_1778962904703.png",
+        bg: "/assets/garden_bg_1778962904703.png",
         speaker: "Lace",
         text: "Yıllar sonra Lace ve Kaan kendi şirketlerini kurdular. Gölgelerden zirveye uzanan bir aşk...",
         end: true
@@ -75,21 +75,21 @@ const story = {
 
     // --- YOL 2 & 3: KARANLIK VE UYANIŞ (KÖTÜ KAAN) ---
     cold_path_1: {
-        bg: "assets/library_bg_1778962737349.png",
-        char: "assets/kaan_sprite_1778962129326.png",
+        bg: "/assets/library_bg_1778962737349.png",
+        char: "/assets/kaan_sprite_1778962129326.png",
         speaker: "Kaan",
         text: "Zor kızı oynamayı seviyorsun demek. Bu akşam bana gel, yeni bir proje üzerine çalışalım.",
         next: "kaan_house"
     },
     kaan_house: {
-        bg: "assets/vn_classroom_bg_1778961836745.png", // using classroom as dark room placeholder
-        char: "assets/kaan_sprite_1778962129326.png",
+        bg: "/assets/vn_classroom_bg_1778961836745.png", // using classroom as dark room placeholder
+        char: "/assets/kaan_sprite_1778962129326.png",
         speaker: "Kaan",
         text: "Lace, bir aydır seni bekliyorum. Bu kadar naz yeter. Sevgiliyiz biz, unuttun mu?",
         next: "kaan_house_2"
     },
     kaan_house_2: {
-        char: "assets/vn_character_sprite_1778962030093.png",
+        char: "/assets/vn_character_sprite_1778962030093.png",
         speaker: "Lace",
         text: "Hayır, gerçekten yapamam... Kaan, bırak beni!",
         choices: [
@@ -105,7 +105,7 @@ const story = {
         end: true
     },
     empowerment_ending: {
-        bg: "assets/garden_bg_1778962904703.png",
+        bg: "/assets/garden_bg_1778962904703.png",
         char: "",
         speaker: "Lace",
         text: "Hayır. Annemin sessizliğinin bedelini ben ödemeyeceğim. Adalet yerini buldu. Gökyüzü artık mavi.",
