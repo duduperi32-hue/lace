@@ -271,68 +271,89 @@ const story = {
     },
     ep11_3: {
         speaker: "Sistem",
-        text: "Kaan hafifçe inler ama gözlerini Lara'nın o telaşlı, yeşil gözlerinden ayıramaz. O an aralarında büyük bir çekim oluşur.",
+        text: "Kaan hafifçe inler ama gözlerini Lara'nın o telaşlı, yeşil gözlerinden ayıramaz. Lara ise içten içe titremektedir. 'Ona güvenebilir miyim? Yoksa o da mı beni terk edecek?'",
         choices: [
-            { text: "Gözlerini kaçır ve hızla sar", target: "ep12_1", anxietyChange: +10 },
-            { text: "Kaan'ın gözlerine bakarak hafifçe gülümse", target: "ep12_1", anxietyChange: -10 }
+            { text: "Gözlerini kaçır (Güvenmek çok zor...)", target: "ep12_1", anxietyChange: +15 },
+            { text: "Kaan'ın elini sıkıca tut", target: "ep12_1", anxietyChange: -5 }
         ]
     },
 
     // ==========================================
-    // BÖLÜM 12: Eylül'ün Pişmanlığı
+    // BÖLÜM 12: Sahte Dostluk
     // ==========================================
     ep12_1: {
         bg: "/assets/garden_bg_1778962904703.png",
         char: "/assets/eylul_sprite_1778962140020.png",
         speaker: "Eylül",
-        text: "(Bölüm 12) (Ertesi gün bahçede) Kaan... Ben çok üzgünüm. Ares'in böyle bir psikopatlık yapacağını tahmin etmedim.",
-        next: "ep12_2"
-    },
-    ep12_2: {
-        char: "/assets/kaan_sprite_1778962129326.png",
-        speaker: "Kaan",
-        text: "Senin suçun yok Eylül. Ama senin takıntıların etrafındakilere zarar veriyor, bunu gör artık.",
-        next: "ep13_1"
-    },
-
-    // ==========================================
-    // BÖLÜM 13: Lara'nın İç Savaşı
-    // ==========================================
-    ep13_1: {
-        bg: "/assets/library_bg_1778962737349.png",
-        char: "/assets/vn_character_sprite_1778962030093.png",
-        speaker: "Lara",
-        text: "(Bölüm 13) Kaan'ın pansuman yaparken bana attığı o bakış... Aklımdan çıkmıyor. Ama ya Eylül bunu öğrenirse? Ya Ares bana da zarar verirse?",
+        text: "(Bölüm 12) Lara, geçen günkü olay için çok üzgünüm. Ares'in öyle biri olduğunu bilmiyordum. Gel, her şeyi unutalım ve yeni bir sayfa açalım. Arkadaş olalım mı?",
         choices: [
-            { text: "Düşüncelere boğul ve panikle", target: "ep14_1", anxietyChange: +25 },
-            { text: "Kaan'ı sevdiğini kendine itiraf et", target: "ep14_1", anxietyChange: -10 }
+            { text: "Eylül'e güvenmeyi dene", target: "ep13_1", anxietyChange: -10 },
+            { text: "Mesafeli kal", target: "ep13_1", anxietyChange: +10 }
         ]
     },
 
     // ==========================================
-    // BÖLÜM 14: Ares'in Uzaklaştırılması
+    // BÖLÜM 13: Sırların Paylaşımı
+    // ==========================================
+    ep13_1: {
+        bg: "/assets/library_bg_1778962737349.png",
+        char: "/assets/eylul_sprite_1778962140020.png",
+        speaker: "Eylül",
+        text: "(Bölüm 13) Haftalar geçer. Lara ve Eylül kütüphanede vakit geçirir. Lara, annesiyle ilgili travmalarını ilk kez birine anlatır... Eylül'e.",
+        next: "ep13_2"
+    },
+    ep13_2: {
+        char: "/assets/vn_character_sprite_1778962030093.png",
+        speaker: "Lara",
+        text: "Kimseye söylemedim ama Eylül... Annem beni karanlık odaya kilitlerdi. Sevgi nedir hiç bilmedim.",
+        next: "ep13_3"
+    },
+    ep13_3: {
+        char: "/assets/eylul_sprite_1778962140020.png",
+        speaker: "Eylül",
+        text: "Ah Lara... Ne kadar acı. Merak etme, sırrın benimle güvende. (Eylül'ün yüzünde tuhaf, soğuk bir gülümseme belirir.)",
+        next: "ep14_1"
+    },
+
+    // ==========================================
+    // BÖLÜM 14: Büyük İhanet
     // ==========================================
     ep14_1: {
         bg: "/assets/vn_classroom_bg_1778961836745.png",
         speaker: "Sistem",
-        text: "(Bölüm 14) Okul yönetimi, Kaan'a saldırdığı için Ares'i okuldan uzaklaştırır. Kaan, Lara'nın sırasına doğru yaklaşır.",
+        text: "(Bölüm 14) Ertesi gün okula girdiğinde herkesin fısıldaştığını duyarsın. Panolarda senin çocukluk fotoğrafların ve 'Annesi tarafından istenmeyen kız' yazıları vardır.",
         next: "ep14_2"
     },
     ep14_2: {
-        char: "/assets/kaan_sprite_1778962129326.png",
-        speaker: "Kaan",
-        text: "Dün benim yaralarımı sardığın için sağ ol. Senin ellerin de en az kalbin kadar şifalıymış.",
-        next: "ep15_1"
+        char: "/assets/eylul_sprite_1778962140020.png",
+        speaker: "Eylül",
+        text: "Üzgünüm Lara, ama Kaan'ın senin gibi 'hasarlı' biriyle vakit kaybetmesine izin veremezdim. İnsanlar senin ne kadar dengesiz olduğunu bilmeliydi.",
+        choices: [
+            { text: "Eylül'ün üzerine yürü", target: "ep15_1", anxietyChange: +30 },
+            { text: "Kaan'ı ara, ona sığın", target: "ep15_1", anxietyChange: +20 }
+        ]
     },
 
     // ==========================================
-    // BÖLÜM 15: FİNAL (Huzur)
+    // BÖLÜM 15: FİNAL (Yüzleşme)
     // ==========================================
     ep15_1: {
         bg: "/assets/garden_bg_1778962904703.png",
+        char: "/assets/kaan_sprite_1778962129326.png",
+        speaker: "Kaan",
+        text: "(Bölüm 15 - FİNAL) Kaan, Eylül'ün yanına gelir. 'Bunu nasıl yaparsın Eylül? Lara'nın güvenini nasıl böyle kırarsın?'",
+        next: "ep15_2"
+    },
+    ep15_2: {
         char: "/assets/vn_character_sprite_1778962030093.png",
         speaker: "Lara",
-        text: "(Bölüm 15 - FİNAL) Tüm o travmalar, anksiyete, Eylül'ün oyunları, Ares'in öfkesi... Hepsi Kaan'ın bana 'Buradayım, güvendesin' deyişiyle silinip gitti.",
+        text: "Kaan... Ben artık kimseye güvenemem. Annem haklıydı, dünya çok karanlık bir yer.",
+        next: "ep15_3"
+    },
+    ep15_3: {
+        char: "/assets/kaan_sprite_1778962129326.png",
+        speaker: "Kaan",
+        text: "Hayır Lara. Ben buradayım. Eylül'ü hayatımızdan sonsuza dek çıkarıyoruz. Sadece bana bak... Lütfen.",
         next: "ep_end"
     },
     ep_end: {
