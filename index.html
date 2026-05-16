@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lace - Oyun Seçim Menüsü</title>
+    <meta name="description" content="Modern ve etkileşimli oyun seçim arayüzü. En sevdiğiniz oyunu seçin ve maceraya başlayın.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="blob"></div>
+    
+    <div class="container">
+        <header>
+            <h1 id="main-title">Lace Universe</h1>
+            <p class="subtitle">Maceraya başlamak için bir mod seçin</p>
+        </header>
+
+        <main class="game-options">
+            <div class="option-card" id="btn-speed-run" onclick="selectGame('Hızlı Koşu')">
+                <div class="icon">⚡</div>
+                <h2>Hızlı Koşu</h2>
+                <p>Zamana karşı yarışın ve engelleri en kısa sürede aşın. Reflekslerinizi test edin!</p>
+            </div>
+
+            <div class="option-card" id="btn-strategy" onclick="selectGame('Strateji Arenası')">
+                <div class="icon">🧩</div>
+                <h2>Strateji Arenası</h2>
+                <p>Zekanızı kullanın, hamlelerinizi planlayın ve rakiplerinizi zekanızla alt edin.</p>
+            </div>
+
+            <div class="option-card" id="btn-survival" onclick="selectGame('Hayatta Kalma')">
+                <div class="icon">🛡️</div>
+                <h2>Hayatta Kalma</h2>
+                <p>Giderek zorlaşan dalgalara karşı ne kadar süre dayanabileceksiniz?</p>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
