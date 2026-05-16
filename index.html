@@ -8,6 +8,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/style.css">
+    <!-- FontAwesome for mute icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
     <div id="game-container">
@@ -26,6 +28,18 @@
                 <div id="anxiety-bar-fill"></div>
             </div>
         </div>
+
+        <!-- Ses Kontrol Butonu -->
+        <button id="mute-btn" title="Sesi Aç/Kapat">
+            <i class="fas fa-volume-up"></i>
+        </button>
+
+        <audio id="bg-music" loop>
+            <source src="https://www.chosic.com/wp-content/uploads/2021/04/Chopin-Nocturne-op.9-No.2.mp3" type="audio/mpeg">
+        </audio>
+        <audio id="heartbeat-snd" loop>
+            <source src="https://www.soundjay.com/human/heartbeat-01.mp3" type="audio/mpeg">
+        </audio>
 
         <!-- UI Katmanı -->
         <div id="ui-layer">

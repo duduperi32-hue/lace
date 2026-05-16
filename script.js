@@ -756,9 +756,21 @@ document.addEventListener("DOMContentLoaded", () => {
     const anxietyValueEl = document.getElementById('anxiety-value');
     const anxietyBarFill = document.getElementById('anxiety-bar-fill');
     const anxietyHud = document.getElementById('anxiety-hud');
+    const muteBtn = document.getElementById('mute-btn');
+    const bgMusic = document.getElementById('bg-music');
+    const heartbeatSnd = document.getElementById('heartbeat-snd');
+
+    let isMuted = false;
 
     startBtn.addEventListener('click', startGame);
     dialogueBox.addEventListener('click', advanceStory);
+    
+    muteBtn.addEventListener('click', () => {
+        isMuted = !isMuted;
+        bgMusic.muted = isMuted;
+        heartbeatSnd.muted = isMuted;
+        muteBtn.innerHTML = isMuted ? '<i class="fas fa-volume-mute"></i>' : '<i class="fas fa-volume-up"></i>';
+    });
 
     function updateAnxiety(change) {
         if(change === -1000) {
@@ -776,12 +788,15 @@ document.addEventListener("DOMContentLoaded", () => {
         if(anxietyLevel >= 70) {
             anxietyBarFill.style.background = "red";
             anxietyHud.classList.add("panic-mode");
+            if (!isMuted) heartbeatSnd.play();
         } else if(anxietyLevel >= 50) {
             anxietyBarFill.style.background = "orange";
             anxietyHud.classList.remove("panic-mode");
+            heartbeatSnd.pause();
         } else {
             anxietyBarFill.style.background = "var(--primary-gradient)";
             anxietyHud.classList.remove("panic-mode");
+            heartbeatSnd.pause();
         }
     }
 
@@ -790,6 +805,9 @@ document.addEventListener("DOMContentLoaded", () => {
         currentNode = "start";
         anxietyLevel = 20;
         updateAnxiety(0);
+        if (!isMuted) {
+            bgMusic.play().catch(e => console.log("Müzik başlatılamadı: ", e));
+        }
         renderNode();
     }
 

@@ -256,6 +256,30 @@ body {
     pointer-events: none;
 }
 
+#mute-btn {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background: rgba(15, 23, 42, 0.8);
+    border: 1px solid rgba(255,255,255,0.1);
+    color: white;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    transition: all 0.2s ease;
+}
+
+#mute-btn:hover {
+    background: var(--primary-gradient);
+    transform: scale(1.1);
+}
+
 .anxiety-label {
     font-size: 1rem;
     font-weight: 600;
