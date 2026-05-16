@@ -813,15 +813,14 @@ document.addEventListener("DOMContentLoaded", () => {
         if(anxietyLevel >= 70) {
             anxietyBarFill.style.background = "red";
             anxietyHud.classList.add("panic-mode");
-            if (!isMuted) heartbeatSnd.play();
-        } else if(anxietyLevel >= 50) {
-            anxietyBarFill.style.background = "orange";
-            anxietyHud.classList.remove("panic-mode");
-            heartbeatSnd.pause();
+            if (!isMuted && heartbeatSnd.paused) {
+                heartbeatSnd.play().catch(e => console.log("Kalp atışı sesi başlatılamadı: ", e));
+            }
         } else {
-            anxietyBarFill.style.background = "var(--primary-gradient)";
+            anxietyBarFill.style.background = anxietyLevel >= 50 ? "orange" : "var(--primary-gradient)";
             anxietyHud.classList.remove("panic-mode");
             heartbeatSnd.pause();
+            heartbeatSnd.currentTime = 0; // Sesi başa sar
         }
     }
 
