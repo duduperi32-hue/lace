@@ -79,19 +79,19 @@ const story = {
     ep3_1: {
         bg: "/assets/garden_bg_1778962904703.png",
         speaker: "Sistem",
-        text: "(Bölüm 3) Bahçeye kaçtın. Gözyaşlarını silerken yanına biri oturur.",
+        text: "(Bölüm 3) Bahçeye kaçtın. Gözyaşlarını silerken yanına iriyarı, sert bakışlı biri oturur.",
         next: "ep3_2"
     },
     ep3_2: {
-        char: "", // Ares'in resmi olmadığı için boş veya başka bir sprite kullanılabilir
+        char: "/assets/ARES.png", 
         speaker: "Ares",
-        text: "Kaan hep öyledir, kafana takma. Ben Ares bu arada. Sen şu yeni gelen kız olmalısın, Lara değil mi?",
+        text: "Kaan hep öyledir, kafana takma. Ben Ares. Sen şu yeni gelen kız olmalısın, Lara değil mi?",
         next: "ep3_3"
     },
     ep3_3: {
         char: "/assets/vn_character_sprite_1778962030093.png",
         speaker: "Lara",
-        text: "Evet... Tanıştığıma memnun oldum Ares. Ama yalnız kalmak istiyorum.",
+        text: "Evet... Memnun oldum Ares. Ama yalnız kalmak istiyorum.",
         next: "ep4_1"
     },
 
@@ -107,7 +107,7 @@ const story = {
     ep4_2: {
         char: "/assets/eylul_sprite_1778962140020.png",
         speaker: "Eylül",
-        text: "Merhaba tatlım. Ben Eylül. Kaan'ın en yakın arkadaşı. Sabahki olay için geldim. Kaan'dan uzak durursan okul hayatın çok daha kolay olur.",
+        text: "Merhaba tatlım. Ben Eylül. Kaan'ın en yakın arkadaşıyım. Kaan'dan uzak durursan okul hayatın çok daha kolay olur.",
         choices: [
             { text: "Sesini çıkarma, kabul et", target: "ep4_3a", anxietyChange: +20 },
             { text: "Bana emir veremezsin de", target: "ep4_3b", anxietyChange: -5 }
@@ -146,148 +146,191 @@ const story = {
     },
 
     // ==========================================
-    // BÖLÜM 6: Ares'in İtirafı
+    // BÖLÜM 6: Ares'in Takıntısı
     // ==========================================
     ep6_1: {
         bg: "/assets/garden_bg_1778962904703.png",
         speaker: "Sistem",
-        text: "(Bölüm 6) Ertesi gün bahçede Ares yanına gelir.",
+        text: "(Bölüm 6) Ertesi gün bahçede Ares'i oldukça dalgın görürsün. Yanına gidersin.",
         next: "ep6_2"
     },
     ep6_2: {
-        char: "",
+        char: "/assets/ARES.png",
         speaker: "Ares",
-        text: "Lara, seni ilk gördüğümden beri aklımdan çıkaramıyorum. Biliyorum çok erken ama... Senden çok hoşlanıyorum.",
+        text: "Lara... Eylül'le aynı sınıftayız ama benimle tek kelime etmiyor. Oysa ben onu ilk gördüğüm günden beri seviyorum.",
         choices: [
-            { text: "Nazikçe reddet (Ben başkasından hoşlanıyorum)", target: "ep6_3", anxietyChange: +10 },
-            { text: "Kibarca zaman iste", target: "ep6_3", anxietyChange: +5 }
+            { text: "Ona üzüldüğünü söyle ve destek ol", target: "ep6_3", anxietyChange: -5 },
+            { text: "Eylül'ün Kaan'ı sevdiğini hatırlat", target: "ep6_3", anxietyChange: +15 }
         ]
     },
     ep6_3: {
-        char: "/assets/vn_character_sprite_1778962030093.png",
-        speaker: "Lara",
-        text: "(Ares çok iyi biri. Ama kalbim ona ait değil. Kaan'ın o karanlık gözleri varken...)",
+        char: "/assets/ARES.png",
+        speaker: "Ares",
+        text: "Biliyorum! Hep o lanet olası Kaan! Kaan'da ne buluyor anlamıyorum. Sadece zengin bir züppe o kadar.",
         next: "ep7_1"
     },
 
     // ==========================================
-    // BÖLÜM 7: Kaan ile Çatıda
+    // BÖLÜM 7: Eylül'ün Reddedişi
     // ==========================================
     ep7_1: {
         bg: "/assets/vn_classroom_bg_1778961836745.png",
         speaker: "Sistem",
-        text: "(Bölüm 7) Ares'i reddettikten sonra bunalmış bir şekilde çatıya çıkarsın. Kaan oradadır.",
+        text: "(Bölüm 7) Ares tüm cesaretini toplayıp boş bir sınıfta Eylül'e hislerini açar. Ancak Eylül acımasızdır.",
         next: "ep7_2"
     },
     ep7_2: {
-        char: "/assets/kaan_sprite_1778962129326.png",
-        speaker: "Kaan",
-        text: "Ares'le konuşmanı gördüm. Neden onu reddettin? Çok iyi çocuktur.",
-        choices: [
-            { text: "Çünkü aklımda sen varsın de", target: "ep7_3a", anxietyChange: +25 },
-            { text: "Aşka inancım yok de", target: "ep7_3b", anxietyChange: -5 }
-        ]
+        char: "/assets/eylul_sprite_1778962140020.png",
+        speaker: "Eylül",
+        text: "Sen mi? Bana mı aşıksın? Ares, güldürme beni. Benim gözüm Kaan'dan başkasını görmez. Sen onun tırnağı bile olamazsın.",
+        next: "ep7_3"
     },
-    ep7_3a: {
-        char: "/assets/kaan_sprite_1778962129326.png",
-        speaker: "Kaan",
-        text: "...Sen tehlikeli sularda yüzüyorsun küçük kız.",
-        next: "ep8_1"
-    },
-    ep7_3b: {
-        char: "/assets/kaan_sprite_1778962129326.png",
-        speaker: "Kaan",
-        text: "Haklısın. Aşk sadece zayıflıktır.",
+    ep7_3: {
+        char: "/assets/ARES.png",
+        speaker: "Ares",
+        text: "(Gözleri dolar ve öfkeyle yumruklarını sıkar) Bunu bana yapmayacaktın Eylül... O Kaan'ın yüzünü dağıtacağım!",
         next: "ep8_1"
     },
 
     // ==========================================
-    // BÖLÜM 8: Dörtgen Daralıyor
+    // BÖLÜM 8: Anksiyete Tetikleniyor
     // ==========================================
     ep8_1: {
         bg: "/assets/library_bg_1778962737349.png",
-        speaker: "Sistem",
-        text: "(Bölüm 8) Ares pes etmez ve sana çiçek alır. Kaan bunu görünce sinirlenir, Eylül ise Kaan'ın kıskanmasından delirir.",
-        next: "ep8_2"
-    },
-    ep8_2: {
-        char: "/assets/eylul_sprite_1778962140020.png",
-        speaker: "Eylül",
-        text: "Lara, oyun mu oynuyorsun? Hem Ares'i peşinden koşturuyor hem de Kaan'a bakıyorsun!",
+        char: "/assets/vn_character_sprite_1778962030093.png",
+        speaker: "Lara",
+        text: "(Bölüm 8) Ares'in o öfke dolu gözleri beni çok korkuttu. Eski okulumdaki o kavgacı çocukları hatırlattı. Mideme kramplar giriyor...",
         choices: [
-            { text: "Sus ve oradan kaç", target: "ep9_1", anxietyChange: +30 },
-            { text: "Kendini savun", target: "ep9_1", anxietyChange: +15 }
+            { text: "Kaan'ı uyarmak için ara", target: "ep9_1", anxietyChange: +10 },
+            { text: "Korkudan bir yere saklan", target: "ep9_1", anxietyChange: +25 }
         ]
     },
 
     // ==========================================
-    // BÖLÜM 9: Panik Sınırı
+    // BÖLÜM 9: Kavga Öncesi Sessizlik
     // ==========================================
     ep9_1: {
-        bg: "/assets/vn_classroom_bg_1778961836745.png",
-        char: "/assets/vn_character_sprite_1778962030093.png",
-        speaker: "Lara",
-        text: "(Bölüm 9) Nefes alamıyorum... Eski okuldaki herkesin üzerime geldiği o gün gibi... Her şey tekrar ediyor!",
+        bg: "/assets/garden_bg_1778962904703.png",
+        speaker: "Sistem",
+        text: "(Bölüm 9) Okul çıkışında bahçe inanılmaz sessizdi. Herkesin bir köşeye toplandığını gördün.",
         next: "ep10_1"
     },
 
     // ==========================================
-    // BÖLÜM 10: Ares'in İhaneti
+    // BÖLÜM 10: Büyük Kavga!
     // ==========================================
     ep10_1: {
-        bg: "/assets/garden_bg_1778962904703.png",
+        bg: "/assets/vn_classroom_bg_1778961836745.png",
         speaker: "Sistem",
-        text: "(Bölüm 10) Ares, onu reddettiğin için öfkelenip Eylül ile işbirliği yapar. Okula senin sırlarını yayarlar.",
+        text: "(Bölüm 10) Ares okulun arkasında Kaan'ın önünü keser.",
+        next: "ep10_2"
+    },
+    ep10_2: {
+        char: "/assets/ARES.png",
+        speaker: "Ares",
+        text: "Eylül seni sevdiğini söylüyor! Ne var sende ha?! Ne buluyor sende!",
+        next: "ep10_3"
+    },
+    ep10_3: {
+        char: "/assets/kaan_sprite_1778962129326.png",
+        speaker: "Kaan",
+        text: "Ares, saçmalamayı kes. Benim Eylül'le bir ilgim yok, biliyorsun. Geri çekil.",
+        next: "ep10_4"
+    },
+    ep10_4: {
+        speaker: "Sistem",
+        text: "Ares dinlemez ve gözü dönmüş bir şekilde Kaan'ın üzerine atlar. Kaan savunmasız yakalanır ve fena halde dayak yer. Ares, hıncını alıp oradan uzaklaşır.",
         choices: [
-            { text: "Yıkıl ve ağla", target: "ep11_1", anxietyChange: +35 },
-            { text: "Güçlü durmaya çalış", target: "ep11_1", anxietyChange: +20 }
+            { text: "Çığlık atarak Kaan'ın yanına koş", target: "ep11_1", anxietyChange: +30 },
+            { text: "Derin nefes al, sakinleşip yanına git", target: "ep11_1", anxietyChange: -5 }
         ]
     },
 
     // ==========================================
-    // BÖLÜM 11, 12, 13, 14, 15... Hızlı Akış
+    // BÖLÜM 11: Pansuman
     // ==========================================
     ep11_1: {
         bg: "/assets/library_bg_1778962737349.png",
-        speaker: "Sistem",
-        text: "(Bölüm 11) Kaan sırların yayıldığını duyar. Senin yanına gelir. 'Bunlar doğru mu?' diye sorar.",
-        choices: [
-            { text: "Ağlayarak anlat", target: "ep12_1", anxietyChange: +10 },
-            { text: "Korkuyla yalan söyle", target: "ep12_1", anxietyChange: +25 }
-        ]
-    },
-    ep12_1: {
-        bg: "/assets/garden_bg_1778962904703.png",
-        speaker: "Sistem",
-        text: "(Bölüm 12) Kaan, Ares'in ve Eylül'ün yalan söylediğini anlar. Gidip onlarla yüzleşir.",
-        next: "ep13_1"
-    },
-    ep13_1: {
-        bg: "/assets/vn_classroom_bg_1778961836745.png",
-        speaker: "Sistem",
-        text: "(Bölüm 13) Kaan ve Ares arasında büyük bir kavga çıkar. Lara araya girmeye çalışır.",
-        choices: [
-            { text: "Kaan'ı korumak için önüne geç", target: "ep14_1", anxietyChange: +20 },
-            { text: "Köşede titreyerek izle", target: "ep14_1", anxietyChange: +30 }
-        ]
-    },
-    ep14_1: {
-        bg: "/assets/garden_bg_1778962904703.png",
         char: "/assets/kaan_sprite_1778962129326.png",
         speaker: "Kaan",
-        text: "(Bölüm 14) Kavga biter. Ares uzaklaştırılır. Eylül pişman olur. Kaan yanına gelir ve ellerini tutar.",
-        next: "ep15_1"
+        text: "(Bölüm 11) (Kaşı yarılmış, dudağı patlamış halde nefes nefese oturur) Neden geldin Lara? Beni bu halde görmeni istemezdim.",
+        next: "ep11_2"
     },
-    ep15_1: {
+    ep11_2: {
+        char: "/assets/vn_character_sprite_1778962030093.png",
+        speaker: "Lara",
+        text: "Sessiz ol Kaan. İzin ver temizleyeyim... (Lara elleri titreyerek pamuğu Kaan'ın yarasına bastırır).",
+        next: "ep11_3"
+    },
+    ep11_3: {
+        speaker: "Sistem",
+        text: "Kaan hafifçe inler ama gözlerini Lara'nın o telaşlı, yeşil gözlerinden ayıramaz. O an aralarında büyük bir çekim oluşur.",
+        choices: [
+            { text: "Gözlerini kaçır ve hızla sar", target: "ep12_1", anxietyChange: +10 },
+            { text: "Kaan'ın gözlerine bakarak hafifçe gülümse", target: "ep12_1", anxietyChange: -10 }
+        ]
+    },
+
+    // ==========================================
+    // BÖLÜM 12: Eylül'ün Pişmanlığı
+    // ==========================================
+    ep12_1: {
+        bg: "/assets/garden_bg_1778962904703.png",
+        char: "/assets/eylul_sprite_1778962140020.png",
+        speaker: "Eylül",
+        text: "(Bölüm 12) (Ertesi gün bahçede) Kaan... Ben çok üzgünüm. Ares'in böyle bir psikopatlık yapacağını tahmin etmedim.",
+        next: "ep12_2"
+    },
+    ep12_2: {
+        char: "/assets/kaan_sprite_1778962129326.png",
+        speaker: "Kaan",
+        text: "Senin suçun yok Eylül. Ama senin takıntıların etrafındakilere zarar veriyor, bunu gör artık.",
+        next: "ep13_1"
+    },
+
+    // ==========================================
+    // BÖLÜM 13: Lara'nın İç Savaşı
+    // ==========================================
+    ep13_1: {
         bg: "/assets/library_bg_1778962737349.png",
         char: "/assets/vn_character_sprite_1778962030093.png",
         speaker: "Lara",
-        text: "(Bölüm 15 - FİNAL) Tüm o travmalar, anksiyete, karanlık geçmiş... Hepsi Kaan'ın bana 'Buradayım, güvendesin' deyişiyle silinip gitti.",
+        text: "(Bölüm 13) Kaan'ın pansuman yaparken bana attığı o bakış... Aklımdan çıkmıyor. Ama ya Eylül bunu öğrenirse? Ya Ares bana da zarar verirse?",
+        choices: [
+            { text: "Düşüncelere boğul ve panikle", target: "ep14_1", anxietyChange: +25 },
+            { text: "Kaan'ı sevdiğini kendine itiraf et", target: "ep14_1", anxietyChange: -10 }
+        ]
+    },
+
+    // ==========================================
+    // BÖLÜM 14: Ares'in Uzaklaştırılması
+    // ==========================================
+    ep14_1: {
+        bg: "/assets/vn_classroom_bg_1778961836745.png",
+        speaker: "Sistem",
+        text: "(Bölüm 14) Okul yönetimi, Kaan'a saldırdığı için Ares'i okuldan uzaklaştırır. Kaan, Lara'nın sırasına doğru yaklaşır.",
+        next: "ep14_2"
+    },
+    ep14_2: {
+        char: "/assets/kaan_sprite_1778962129326.png",
+        speaker: "Kaan",
+        text: "Dün benim yaralarımı sardığın için sağ ol. Senin ellerin de en az kalbin kadar şifalıymış.",
+        next: "ep15_1"
+    },
+
+    // ==========================================
+    // BÖLÜM 15: FİNAL (Huzur)
+    // ==========================================
+    ep15_1: {
+        bg: "/assets/garden_bg_1778962904703.png",
+        char: "/assets/vn_character_sprite_1778962030093.png",
+        speaker: "Lara",
+        text: "(Bölüm 15 - FİNAL) Tüm o travmalar, anksiyete, Eylül'ün oyunları, Ares'in öfkesi... Hepsi Kaan'ın bana 'Buradayım, güvendesin' deyişiyle silinip gitti.",
         next: "ep_end"
     },
     ep_end: {
         speaker: "Sistem",
-        text: "MUTLU SON: Eğer anksiyeten 70'i geçmediyse, tebrikler! Geçmişinin hayaletlerini yendin ve Kaan'la huzurlu bir hayata adım attın.",
+        text: "MUTLU SON: Eğer anksiyeten 70'i geçmediyse, tebrikler! Geçmişinin hayaletlerini yendin, Kaan'ın yaralarını iyileştirdin ve o da senin kalbini iyileştirdi.",
         choices: [{ text: "Tekrar Oyna", target: "start", anxietyChange: -1000 }]
     },
 
@@ -298,7 +341,7 @@ const story = {
         bg: "", 
         char: "",
         speaker: "Sistem",
-        text: "!!! PANİK ATAK !!!\nAnksiyete seviyen 70'i aştı! Kalbin göğsünü delip çıkacakmış gibi atıyor. Etrafındaki sesler boğuklaşıyor, nefes alamıyorsun...",
+        text: "!!! PANİK ATAK !!!\nAnksiyete seviyen 70'i aştı! Ares'in kavgası, Eylül'ün bakışları, geçmişte yaşadığın tüm zorbalıklar... Kalbin göğsünü delip çıkacakmış gibi atıyor.",
         next: "panic_attack_2"
     },
     panic_attack_2: {
@@ -415,9 +458,9 @@ document.addEventListener("DOMContentLoaded", () => {
                 // Seçeneğin yanına anksiyete etkisini göster (opsiyonel)
                 let effectText = "";
                 if(choice.anxietyChange > 0 && choice.anxietyChange !== -1000) {
-                    effectText = ` (Anksiyete Artar)`;
+                    effectText = ` (Anksiyete +${choice.anxietyChange})`;
                 } else if(choice.anxietyChange < 0 && choice.anxietyChange !== -1000) {
-                    effectText = ` (Sakinleştirir)`;
+                    effectText = ` (Sakinleştirir ${choice.anxietyChange})`;
                 }
 
                 btn.textContent = choice.text + effectText;
@@ -459,7 +502,6 @@ document.addEventListener("DOMContentLoaded", () => {
     function advanceStory() {
         const node = story[currentNode];
         if (isTyping) {
-            // Eğer yazı yazılıyorsa hemen tamamla
             if (typewriterTimeout) clearTimeout(typewriterTimeout);
             dialogueText.innerHTML = node.text;
             isTyping = false;
